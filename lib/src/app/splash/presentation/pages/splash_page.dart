@@ -27,13 +27,22 @@ class _SplashPageState extends State<SplashPage> {
       body: Center(
         child: Container(
           height: 120,
-          width: 120,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             // image: DecorationImage(
             //   image: Assets.images.bhurja.provider(),
             //   fit: BoxFit.cover,
             // ),
+          ),
+          child: const Center(
+            child: Text(
+              'Forex Academy \n Limitless Learnings',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
         ).animate().fade(duration: 500.ms),
       ),
