@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutterguide/src/core/routes/router.dart';
 import 'package:flutterguide/src/core/themes/app_colors.dart';
 import 'package:flutterguide/src/core/widgets/scaffold_wrapper.dart';
+import 'package:flutterguide/src/features/home/presentation/pages/home_page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -17,7 +17,9 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(milliseconds: 1500), () {});
+    Timer(const Duration(milliseconds: 1500), () {
+      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_) => const HomePage()), (route) => false);
+    });
   }
 
   @override
