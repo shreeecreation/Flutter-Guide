@@ -9,8 +9,37 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  /// File path: assets/images/background.jpg
+  AssetGenImage get background =>
+      const AssetGenImage('assets/images/background.jpg');
+
+  /// File path: assets/images/fc_logo.png
+  AssetGenImage get fcLogo => const AssetGenImage('assets/images/fc_logo.png');
+
+  /// File path: assets/images/forex_volume.webp
+  AssetGenImage get forexVolume =>
+      const AssetGenImage('assets/images/forex_volume.webp');
+
+  /// File path: assets/images/trading_protrait.jpg
+  AssetGenImage get tradingProtrait =>
+      const AssetGenImage('assets/images/trading_protrait.jpg');
+
+  /// File path: assets/images/transparent_logo.png
+  AssetGenImage get transparentLogo =>
+      const AssetGenImage('assets/images/transparent_logo.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values =>
+      [background, fcLogo, forexVolume, tradingProtrait, transparentLogo];
+}
+
 class Assets {
   Assets._();
+
+  static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
 class AssetGenImage {
