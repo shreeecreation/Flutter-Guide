@@ -159,6 +159,14 @@ class _HomePageState extends State<HomePage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            !mobile
+                                ? SizedBox(
+                                    height: context.height * .4,
+                                    child: Container(
+                                      child: AppCacheImageViewer(imageUrl: Assets.images.pnglogo.path, imageTypeEnum: ImageTypeEnum.assets),
+                                    ),
+                                  )
+                                : const SizedBox(),
                             SizedBox(
                               width: mobile ? context.width : context.width * .5,
                               child: Column(
@@ -182,14 +190,7 @@ class _HomePageState extends State<HomePage> {
                                 ],
                               ),
                             ),
-                            !mobile
-                                ? SizedBox(
-                                    height: context.height * .4,
-                                    child: Container(
-                                      child: AppCacheImageViewer(imageUrl: Assets.images.pnglogo.path, imageTypeEnum: ImageTypeEnum.assets),
-                                    ),
-                                  )
-                                : const SizedBox(),
+
                             // Expanded(
                             //   child: Card(
                             //     color: AppColors.white.withOpacity(.8),
