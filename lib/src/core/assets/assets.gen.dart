@@ -23,6 +23,9 @@ class $AssetsImagesGen {
   AssetGenImage get forexVolume =>
       const AssetGenImage('assets/images/forex_volume.webp');
 
+  /// File path: assets/images/pnglogo.png
+  AssetGenImage get pnglogo => const AssetGenImage('assets/images/pnglogo.png');
+
   /// File path: assets/images/trading_protrait.jpg
   AssetGenImage get tradingProtrait =>
       const AssetGenImage('assets/images/trading_protrait.jpg');
@@ -32,8 +35,14 @@ class $AssetsImagesGen {
       const AssetGenImage('assets/images/transparent_logo.png');
 
   /// List of all assets
-  List<AssetGenImage> get values =>
-      [background, fcLogo, forexVolume, tradingProtrait, transparentLogo];
+  List<AssetGenImage> get values => [
+        background,
+        fcLogo,
+        forexVolume,
+        pnglogo,
+        tradingProtrait,
+        transparentLogo
+      ];
 }
 
 class Assets {
