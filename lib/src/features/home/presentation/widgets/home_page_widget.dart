@@ -1,4 +1,7 @@
 import 'package:flutterguide/src/core/core.dart';
+import 'package:get/get.dart';
+
+import '../../../learn/presentation/pages/learn_dashboad_page.dart';
 
 class HomePageHelpers {
   List<Widget> drawerItems = [
@@ -24,7 +27,10 @@ class HomePageHelpers {
 
   List<Widget> navItems = [
     TextButton(
-      onPressed: () {},
+      onPressed: () {
+        final context = Get.context;
+        Navigator.push(context!, MaterialPageRoute(builder: (context) => const LearnDashboadPage()));
+      },
       child: Text("Entry Models", style: AppStyles.text18PxMedium.white),
     ),
     TextButton(

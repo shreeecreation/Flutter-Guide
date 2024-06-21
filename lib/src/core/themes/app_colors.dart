@@ -18,6 +18,8 @@ abstract class AppColors {
   static const Color statusLightRed = Color(0xFFF9E3E3);
   static const Color statusGreen = Color(0xFF4CD964);
   static const Color statusOrange = Color(0xFFFF9212);
+  static const Color canvasColor = Color(0xFF2E2E48);
+  static Color actionColor = const Color(0xFF5F5FA7).withOpacity(0.6);
 
   // background colors
   static const Color scaffoldBackground = Color(0xFFF5F5F7);

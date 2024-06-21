@@ -1,4 +1,3 @@
-import 'package:flutter_svg/svg.dart';
 import 'package:flutterguide/src/core/core.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import '../widgets/widgets.dart';
@@ -195,7 +194,7 @@ class _HomePageState extends State<HomePage> {
                           height: 300,
                           color: AppColors.black,
                           width: double.infinity,
-                          child: Footer(),
+                          child: const Footer(),
                         ),
                       ],
                     )
@@ -254,7 +253,10 @@ class Footer extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    TextButton(onPressed: () {}, child: Text("Privacy Policy", style: AppStyles.text16PxMedium.white)),
+                    TextButton(
+                        onPressed: () {
+                        },
+                        child: Text("Privacy Policy", style: AppStyles.text16PxMedium.white)),
                     5.horizontalSpace,
                     TextButton(onPressed: () {}, child: Text("Terms and Services", style: AppStyles.text16PxMedium.white)),
                     5.horizontalSpace,
