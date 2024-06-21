@@ -29,7 +29,7 @@ class HomePageHelpers {
     TextButton(
       onPressed: () {
         final context = Get.context;
-        Navigator.push(context!, MaterialPageRoute(builder: (context) => const LearnDashboadPage()));
+        // Navigator.push(context!, MaterialPageRoute(builder: (context) => const LearnDashboadPage()));
       },
       child: Text("Entry Models", style: AppStyles.text18PxMedium.white),
     ),
