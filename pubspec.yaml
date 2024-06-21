@@ -49,6 +49,11 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/images/hall_of_names/
+    - assets/svg/
 
 flutter_gen:
   output: lib/src/core/assets/
+
+  integrations:
+    flutter_svg: true

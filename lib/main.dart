@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterguide/src/features/home/presentation/pages/home_page.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -39,7 +40,8 @@ class MyApp extends StatelessWidget {
             fontFamily: GoogleFonts.zillaSlab().fontFamily,
           ),
           debugShowCheckedModeBanner: false,
-          home: const SplashPage(),
+          // home: const SplashPage(),
+          home: HomePage(),
         );
       },
     );

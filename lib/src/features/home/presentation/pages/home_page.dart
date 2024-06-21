@@ -1,7 +1,7 @@
-import 'package:flutterguide/src/core/assets/assets.gen.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:flutterguide/src/core/core.dart';
-import 'package:flutterguide/src/core/widgets/image_type_enum.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import '../widgets/widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -11,50 +11,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<Widget> drawerItems = [
-    ListTile(
-      leading: const Icon(Icons.school),
-      title: Text(
-        "Learn",
-        style: AppStyles.text18PxMedium,
-      ),
-      onTap: () {},
-    ),
-    ListTile(
-      leading: const Icon(Icons.contact_phone),
-      title: Text("Contact", style: AppStyles.text18PxMedium),
-      onTap: () {},
-    ),
-    ListTile(
-      leading: const Icon(Icons.analytics),
-      title: Text("Analysis", style: AppStyles.text18PxMedium),
-      onTap: () {},
-    ),
-  ];
-
-  List<Widget> navItems = [
-    TextButton(
-      onPressed: () {},
-      child: Text("Entry Models", style: AppStyles.text18PxMedium.white),
-    ),
-    TextButton(
-      onPressed: () {},
-      child: Text("CandleSticks", style: AppStyles.text18PxMedium.white),
-    ),
-    TextButton(
-      onPressed: () {},
-      child: Text("Contact", style: AppStyles.text18PxMedium.white),
-    ),
-    TextButton(
-      onPressed: () {},
-      child: Text("Analysis", style: AppStyles.text18PxMedium.white),
-    ),
-    TextButton(
-      onPressed: () {},
-      child: Text("Learn", style: AppStyles.text18PxMedium.white),
-    ),
-    100.horizontalSpace,
-  ];
   @override
   Widget build(BuildContext context) {
     final mobile = context.width < 600;
@@ -88,7 +44,7 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
-                  ...drawerItems,
+                  ...HomePageHelpers().drawerItems,
                 ],
               ),
             )
@@ -100,7 +56,7 @@ class _HomePageState extends State<HomePage> {
               toolbarHeight: 110,
               elevation: 1,
               backgroundColor: AppColors.black,
-              actions: !mobile ? navItems : null,
+              actions: !mobile ? HomePageHelpers().navItems : null,
               flexibleSpace: FlexibleSpaceBar(
                 title: Row(
                   children: [
@@ -122,6 +78,7 @@ class _HomePageState extends State<HomePage> {
           SliverToBoxAdapter(
             child: ResponsiveWrapper(
               defaultScale: true,
+              minWidth: 450,
               breakpoints: const [
                 ResponsiveBreakpoint.resize(600, name: MOBILE),
                 ResponsiveBreakpoint.autoScale(800, name: TABLET),
@@ -155,16 +112,14 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Column(
                       children: [
-                        80.verticalSpace,
+                        60.verticalSpace,
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             !mobile
                                 ? SizedBox(
                                     height: context.height * .4,
-                                    child: Container(
-                                      child: AppCacheImageViewer(imageUrl: Assets.images.pnglogo.path, imageTypeEnum: ImageTypeEnum.assets),
-                                    ),
+                                    child: AppCacheImageViewer(imageUrl: Assets.images.pnglogo.path, imageTypeEnum: ImageTypeEnum.assets),
                                   )
                                 : const SizedBox(),
                             SizedBox(
@@ -190,82 +145,57 @@ class _HomePageState extends State<HomePage> {
                                 ],
                               ),
                             ),
-
-                            // Expanded(
-                            //   child: Card(
-                            //     color: AppColors.white.withOpacity(.8),
-                            //     child: Padding(
-                            //       padding: const EdgeInsets.all(10.0),
-                            //       child: Column(
-                            //         crossAxisAlignment: CrossAxisAlignment.start,
-                            //         children: [
-                            //           10.verticalSpace,
-                            //           Text(
-                            //             "What is Forex ? - Daily Volume, Trading Hours, Trading Days",
-                            //             style: AppStyles.text20PxMedium,
-                            //           ),
-                            //           10.verticalSpace,
-                            //           Html(
-                            //             ///what is forex
-                            //             ///
-                            //             ///
-                            //             data: AppConstants.whatIsForex,
-                            //             style: {
-                            //               "body": Style(
-                            //                 fontSize: FontSize(14.0),
-                            //                 color: Colors.black,
-                            //               ),
-                            //               "b": Style(
-                            //                 fontWeight: FontWeight.bold,
-                            //               ),
-                            //             },
-                            //           ),
-                            //           10.verticalSpace,
-                            //           ClipRRect(
-                            //             borderRadius: BorderRadius.circular(10.0),
-                            //             child: SizedBox(
-                            //               height: 250,
-                            //               child: AppCacheImageViewer(
-                            //                 imageUrl: Assets.images.forexVolume.path,
-                            //                 imageTypeEnum: ImageTypeEnum.assets,
-                            //                 fit: BoxFit.fill,
-                            //               ),
-                            //             ),
-                            //           ),
-                            //           20.verticalSpace,
-                            //           Text(
-                            //             "Hoping you know the basic terms of forex such as pips, candlesticks, etc.\nLet's deep dive into the real world of trading !\n",
-                            //             style: AppStyles.text14PxSemiBold,
-                            //           ),
-                            //         ],
-                            //       ).px(10.0),
-                            //     ),
-                            //   ),
-                            // ),
                           ],
                         ).px(18.0),
                         50.verticalSpace,
                         const InfoCardWidgets(),
-                        30.verticalSpace,
+                        50.verticalSpace,
                         Container(
                           color: AppColors.white,
                           width: double.infinity,
-                          height: context.height * .7,
+                          height: context.height * .55,
                           child: Center(
-                              child: Text(
-                            "Hall of Fames",
-                            style: AppStyles.text30PxBold,
-                          )),
+                            child: Column(
+                              children: [
+                                30.verticalSpace,
+                                Text(
+                                  "Hall of Fames",
+                                  style: AppStyles.text30PxBold,
+                                ),
+                                30.verticalSpace,
+
+                                ///
+                                ///
+                                ///
+                                /// hall of fames
+                                ///
+                                ///
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  children:
+                                      HomePageHelpers().hallOfFamers.map((e) => HallOfFameWidget(name: e["name"], imageUrl: e["imageUrl"])).toList(),
+                                ),
+                                50.verticalSpace,
+                                Text(
+                                  "They are the Hall of Famers in the forex market, recognized for their exceptional trading journeys. Their stories serve as an inspiration to many new traders, and their strategies are seen as the key to success in the forex market. Some of them started from \$10000, \$1000. They are the living proof that anyone can make it in the forex market.",
+                                  style: AppStyles.text16PxSemiBold,
+                                  textAlign: TextAlign.center,
+                                ).px(20.0),
+
+                                ///
+                                ///
+                                ///
+                                ///
+                                ///
+                              ],
+                            ),
+                          ),
                         ),
                         Container(
                           height: 300,
                           color: AppColors.black,
                           width: double.infinity,
-                          child: Center(
-                              child: Text(
-                            "Footer",
-                            style: AppStyles.text30PxBold.white,
-                          )),
+                          child: Footer(),
                         ),
                       ],
                     )
@@ -280,115 +210,60 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-class InfoCardWidgets extends StatelessWidget {
-  const InfoCardWidgets({
-    super.key,
-  });
+class Footer extends StatelessWidget {
+  const Footer({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text("Get engaged with FX Academy features", style: AppStyles.text24PxMedium.white),
-        30.verticalSpace,
-        Row(
-          children: [
-            20.horizontalSpace,
-            InfoCard(
-              title: "Learn",
-              description: "Learn the basics of trading and how to use the platform",
-              buttonText: "Start Learning",
-              onButtonPressed: () {
-                // Handle Learn button press
-              },
-            ),
-            20.horizontalSpace,
-            InfoCard(
-              title: "Analysis",
-              description: "Learn how to analyze the market and make informed decisions",
-              buttonText: "Start Analyzing",
-              onButtonPressed: () {
-                // Handle Analysis button press
-              },
-            ),
-            20.horizontalSpace,
-          ],
-        ),
-        30.verticalSpace,
-        Row(
-          children: [
-            20.horizontalSpace,
-            InfoCard(
-              title: "Entry Models",
-              description: "Start exploring the best entry models for trading",
-              buttonText: "Start Exploring",
-              onButtonPressed: () {
-                // Handle Learn button press
-              },
-            ),
-            20.horizontalSpace,
-            InfoCard(
-              title: "Analysis",
-              description: "Learn how to analyze the market and make informed decisions",
-              buttonText: "Start Analyzing",
-              onButtonPressed: () {
-                // Handle Analysis button press
-              },
-            ),
-            20.horizontalSpace,
-          ],
-        ),
-      ],
-    );
-  }
-}
-
-class InfoCard extends StatelessWidget {
-  final String title;
-  final String description;
-  final String buttonText;
-  final VoidCallback onButtonPressed;
-
-  const InfoCard({
-    super.key,
-    required this.title,
-    required this.description,
-    required this.buttonText,
-    required this.onButtonPressed,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: GestureDetector(
-        onTap: () {
-          // Handle card tap if needed
-        },
-        child: Card(
-          color: AppColors.black,
-          child: Column(
-            children: [
-              20.verticalSpace,
-              Text(
-                title,
-                style: AppStyles.text20PxMedium.white,
-              ),
-              20.verticalSpace,
-              Text(
-                description,
-                style: AppStyles.text14Px.white,
-                textAlign: TextAlign.center,
-              ).px(8.0),
-              20.verticalSpace,
-              TextButton(
-                onPressed: onButtonPressed,
-                child: Text(buttonText),
-              ),
-              20.verticalSpace,
-            ],
+    return Container(
+      color: Colors.black,
+      padding: const EdgeInsets.all(20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text('Disclaimer', style: AppStyles.text20PxMedium.white),
+          5.verticalSpace,
+          const Divider(),
+          5.verticalSpace,
+          Text(
+            "Forex trading is a high-risk activity and may not be suitable for everyone. You should carefully consider your investment objectives, level of experience, and risk appetite before making a decision to trade. The information provided by Forex Academy is for educational purposes only.\nForex Academy does not provide investment or financial advice. Forex Academy is not responsible for any financial losses incurred as a result of using any of the information provided on the website. Forex Academy is not responsible for any financial losses incurred as a result of using any of the information provided on the website.",
+            style: AppStyles.text13Px.white,
           ),
-        ),
+          10.verticalSpace,
+          CustomOutlinedButton.icon(
+            borderColor: AppColors.white,
+            isDisabled: false,
+            label: "Get on Play Store",
+            textColor: AppColors.white,
+            labelStyle: AppStyles.text12Px.white,
+            onPressed: () {},
+            icon: AppCacheImageViewer(
+              imageUrl: Assets.images.playstore.path,
+              imageTypeEnum: ImageTypeEnum.assets,
+            ),
+          ),
+          30.verticalSpace,
+          SizedBox(
+            width: context.width,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "© Forex Academy",
+                  style: AppStyles.text16PxMedium.white,
+                ),
+                Row(
+                  children: [
+                    TextButton(onPressed: () {}, child: Text("Privacy Policy", style: AppStyles.text16PxMedium.white)),
+                    5.horizontalSpace,
+                    TextButton(onPressed: () {}, child: Text("Terms and Services", style: AppStyles.text16PxMedium.white)),
+                    5.horizontalSpace,
+                  ],
+                )
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

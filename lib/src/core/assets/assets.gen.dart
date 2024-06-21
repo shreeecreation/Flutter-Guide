@@ -8,6 +8,8 @@
 // ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
 
 import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/services.dart';
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
@@ -22,6 +24,13 @@ class $AssetsImagesGen {
   /// File path: assets/images/forex_volume.webp
   AssetGenImage get forexVolume =>
       const AssetGenImage('assets/images/forex_volume.webp');
+
+  $AssetsImagesHallOfNamesGen get hallOfNames =>
+      const $AssetsImagesHallOfNamesGen();
+
+  /// File path: assets/images/playstore.png
+  AssetGenImage get playstore =>
+      const AssetGenImage('assets/images/playstore.png');
 
   /// File path: assets/images/pnglogo.png
   AssetGenImage get pnglogo => const AssetGenImage('assets/images/pnglogo.png');
@@ -39,16 +48,55 @@ class $AssetsImagesGen {
         background,
         fcLogo,
         forexVolume,
+        playstore,
         pnglogo,
         tradingProtrait,
         transparentLogo
       ];
 }
 
+class $AssetsSvgGen {
+  const $AssetsSvgGen();
+
+  /// File path: assets/svg/playstore.svg
+  SvgGenImage get playstore => const SvgGenImage('assets/svg/playstore.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [playstore];
+}
+
+class $AssetsImagesHallOfNamesGen {
+  const $AssetsImagesHallOfNamesGen();
+
+  /// File path: assets/images/hall_of_names/bill.jpeg
+  AssetGenImage get bill =>
+      const AssetGenImage('assets/images/hall_of_names/bill.jpeg');
+
+  /// File path: assets/images/hall_of_names/george.jpg
+  AssetGenImage get george =>
+      const AssetGenImage('assets/images/hall_of_names/george.jpg');
+
+  /// File path: assets/images/hall_of_names/marcus.jpg
+  AssetGenImage get marcus =>
+      const AssetGenImage('assets/images/hall_of_names/marcus.jpg');
+
+  /// File path: assets/images/hall_of_names/paul.jpg
+  AssetGenImage get paul =>
+      const AssetGenImage('assets/images/hall_of_names/paul.jpg');
+
+  /// File path: assets/images/hall_of_names/stanley.jpeg
+  AssetGenImage get stanley =>
+      const AssetGenImage('assets/images/hall_of_names/stanley.jpeg');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [bill, george, marcus, paul, stanley];
+}
+
 class Assets {
   Assets._();
 
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsSvgGen svg = $AssetsSvgGen();
 }
 
 class AssetGenImage {
@@ -117,6 +165,59 @@ class AssetGenImage {
       _assetName,
       bundle: bundle,
       package: package,
+    );
+  }
+
+  String get path => _assetName;
+
+  String get keyName => _assetName;
+}
+
+class SvgGenImage {
+  const SvgGenImage(this._assetName);
+
+  final String _assetName;
+
+  SvgPicture svg({
+    Key? key,
+    bool matchTextDirection = false,
+    AssetBundle? bundle,
+    String? package,
+    double? width,
+    double? height,
+    BoxFit fit = BoxFit.contain,
+    AlignmentGeometry alignment = Alignment.center,
+    bool allowDrawingOutsideViewBox = false,
+    WidgetBuilder? placeholderBuilder,
+    String? semanticsLabel,
+    bool excludeFromSemantics = false,
+    SvgTheme theme = const SvgTheme(),
+    ColorFilter? colorFilter,
+    Clip clipBehavior = Clip.hardEdge,
+    @deprecated Color? color,
+    @deprecated BlendMode colorBlendMode = BlendMode.srcIn,
+    @deprecated bool cacheColorFilter = false,
+  }) {
+    return SvgPicture.asset(
+      _assetName,
+      key: key,
+      matchTextDirection: matchTextDirection,
+      bundle: bundle,
+      package: package,
+      width: width,
+      height: height,
+      fit: fit,
+      alignment: alignment,
+      allowDrawingOutsideViewBox: allowDrawingOutsideViewBox,
+      placeholderBuilder: placeholderBuilder,
+      semanticsLabel: semanticsLabel,
+      excludeFromSemantics: excludeFromSemantics,
+      theme: theme,
+      colorFilter: colorFilter,
+      color: color,
+      colorBlendMode: colorBlendMode,
+      clipBehavior: clipBehavior,
+      cacheColorFilter: cacheColorFilter,
     );
   }
 

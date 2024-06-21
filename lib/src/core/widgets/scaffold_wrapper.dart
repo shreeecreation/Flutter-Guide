@@ -89,6 +89,7 @@ class ScaffoldWrapper extends StatelessWidget {
         }
       },
       child: Scaffold(
+        
         key: key,
         appBar: appBar,
         body: body,
