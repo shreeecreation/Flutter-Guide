@@ -1,6 +1,8 @@
+import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:flutterguide/src/core/core.dart';
 import 'package:get/get.dart';
 
+import '../../../dashboard/pages/sidebar_menu.dart';
 import '../../../learn/presentation/pages/learn_dashboad_page.dart';
 
 class HomePageHelpers {
@@ -29,7 +31,7 @@ class HomePageHelpers {
     TextButton(
       onPressed: () {
         final context = Get.context;
-        // Navigator.push(context!, MaterialPageRoute(builder: (context) => const LearnDashboadPage()));
+        Navigator.push(context!, MaterialPageRoute(builder: (context) => SidebarMenu()));
       },
       child: Text("Entry Models", style: AppStyles.text18PxMedium.white),
     ),
@@ -49,7 +51,11 @@ class HomePageHelpers {
       onPressed: () {},
       child: Text("Learn", style: AppStyles.text18PxMedium.white),
     ),
-    100.horizontalSpace,
+    TextButton(
+      onPressed: () {},
+      child: Text("Rules", style: AppStyles.text18PxMedium.white),
+    ),
+    100.hSpace,
   ];
   final List<Map<String, dynamic>> hallOfFamers = [
     {

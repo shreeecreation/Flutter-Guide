@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
               flexibleSpace: FlexibleSpaceBar(
                 title: Row(
                   children: [
-                    20.horizontalSpace,
+                    20.hSpace,
                     SizedBox(
                       height: 50,
                       child: AppCacheImageViewer(
@@ -100,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Column(
                       children: [
-                        30.verticalSpace,
+                        30.vSpace,
                         Center(
                           child: Text(
                             "Welcome G's !",
@@ -111,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Column(
                       children: [
-                        60.verticalSpace,
+                        60.vSpace,
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -131,12 +131,12 @@ class _HomePageState extends State<HomePage> {
                                     style: AppStyles.text36PxSemiBold.white,
                                     textAlign: TextAlign.center,
                                   ),
-                                  15.verticalSpace,
+                                  15.vSpace,
                                   Text(
                                     "This game is a constant battle between you and your emotions. It is a battleground where mastering your emotions is the key to success.",
                                     style: AppStyles.text18PxMedium.white,
                                   ),
-                                  10.verticalSpace,
+                                  10.vSpace,
                                   Text(
                                     "The secret of getting ahead is getting started. — Mark Twain",
                                     style: AppStyles.text16PxSemiBold.copyWith(fontStyle: FontStyle.italic, color: AppColors.greyColor),
@@ -146,9 +146,9 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ],
                         ).px(18.0),
-                        50.verticalSpace,
+                        50.vSpace,
                         const InfoCardWidgets(),
-                        50.verticalSpace,
+                        50.vSpace,
                         Container(
                           color: AppColors.white,
                           width: double.infinity,
@@ -156,12 +156,12 @@ class _HomePageState extends State<HomePage> {
                           child: Center(
                             child: Column(
                               children: [
-                                30.verticalSpace,
+                                30.vSpace,
                                 Text(
                                   "Hall of Fames",
                                   style: AppStyles.text30PxBold,
                                 ),
-                                30.verticalSpace,
+                                30.vSpace,
 
                                 ///
                                 ///
@@ -174,7 +174,7 @@ class _HomePageState extends State<HomePage> {
                                   children:
                                       HomePageHelpers().hallOfFamers.map((e) => HallOfFameWidget(name: e["name"], imageUrl: e["imageUrl"])).toList(),
                                 ),
-                                50.verticalSpace,
+                                50.vSpace,
                                 Text(
                                   "They are the Hall of Famers in the forex market, recognized for their exceptional trading journeys. Their stories serve as an inspiration to many new traders, and their strategies are seen as the key to success in the forex market. Some of them started from \$10000, \$1000. They are the living proof that anyone can make it in the forex market.",
                                   style: AppStyles.text16PxSemiBold,
@@ -221,14 +221,14 @@ class Footer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text('Disclaimer', style: AppStyles.text20PxMedium.white),
-          5.verticalSpace,
+          5.vSpace,
           const Divider(),
-          5.verticalSpace,
+          5.vSpace,
           Text(
             "Forex trading is a high-risk activity and may not be suitable for everyone. You should carefully consider your investment objectives, level of experience, and risk appetite before making a decision to trade. The information provided by Forex Academy is for educational purposes only.\nForex Academy does not provide investment or financial advice. Forex Academy is not responsible for any financial losses incurred as a result of using any of the information provided on the website. Forex Academy is not responsible for any financial losses incurred as a result of using any of the information provided on the website.",
             style: AppStyles.text13Px.white,
           ),
-          10.verticalSpace,
+          10.vSpace,
           CustomOutlinedButton.icon(
             borderColor: AppColors.white,
             isDisabled: false,
@@ -241,7 +241,7 @@ class Footer extends StatelessWidget {
               imageTypeEnum: ImageTypeEnum.assets,
             ),
           ),
-          30.verticalSpace,
+          30.vSpace,
           SizedBox(
             width: context.width,
             child: Row(
@@ -253,13 +253,10 @@ class Footer extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    TextButton(
-                        onPressed: () {
-                        },
-                        child: Text("Privacy Policy", style: AppStyles.text16PxMedium.white)),
-                    5.horizontalSpace,
+                    TextButton(onPressed: () {}, child: Text("Privacy Policy", style: AppStyles.text16PxMedium.white)),
+                    5.hSpace,
                     TextButton(onPressed: () {}, child: Text("Terms and Services", style: AppStyles.text16PxMedium.white)),
-                    5.horizontalSpace,
+                    5.hSpace,
                   ],
                 )
               ],

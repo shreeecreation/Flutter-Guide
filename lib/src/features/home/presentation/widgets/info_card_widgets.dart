@@ -11,10 +11,10 @@ class InfoCardWidgets extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text("Get engaged with FX Academy features", style: AppStyles.text24PxMedium.white),
-        30.verticalSpace,
+        30.vSpace,
         Row(
           children: [
-            20.horizontalSpace,
+            20.hSpace,
             InfoCard(
               title: "Learn",
               description: "Learn the basics of trading and how to use the platform",
@@ -23,7 +23,7 @@ class InfoCardWidgets extends StatelessWidget {
                 // Handle Learn button press
               },
             ),
-            20.horizontalSpace,
+            20.hSpace,
             InfoCard(
               title: "Analysis",
               description: "Learn how to analyze the market and make informed decisions",
@@ -32,13 +32,13 @@ class InfoCardWidgets extends StatelessWidget {
                 // Handle Analysis button press
               },
             ),
-            20.horizontalSpace,
+            20.hSpace,
           ],
         ),
-        30.verticalSpace,
+        30.vSpace,
         Row(
           children: [
-            20.horizontalSpace,
+            20.hSpace,
             InfoCard(
               title: "Entry Models",
               description: "Start exploring the best entry models for trading",
@@ -47,7 +47,7 @@ class InfoCardWidgets extends StatelessWidget {
                 // Handle Learn button press
               },
             ),
-            20.horizontalSpace,
+            20.hSpace,
             InfoCard(
               title: "Analysis",
               description: "Learn how to analyze the market and make informed decisions",
@@ -56,7 +56,7 @@ class InfoCardWidgets extends StatelessWidget {
                 // Handle Analysis button press
               },
             ),
-            20.horizontalSpace,
+            20.hSpace,
           ],
         ),
       ],
@@ -89,23 +89,23 @@ class InfoCard extends StatelessWidget {
           color: AppColors.black,
           child: Column(
             children: [
-              20.verticalSpace,
+              20.vSpace,
               Text(
                 title,
                 style: AppStyles.text20PxMedium.white,
               ),
-              20.verticalSpace,
+              20.vSpace,
               Text(
                 description,
                 style: AppStyles.text14Px.white,
                 textAlign: TextAlign.center,
               ).px(8.0),
-              20.verticalSpace,
+              20.vSpace,
               TextButton(
                 onPressed: onButtonPressed,
                 child: Text(buttonText),
               ),
-              20.verticalSpace,
+              20.vSpace,
             ],
           ),
         ),

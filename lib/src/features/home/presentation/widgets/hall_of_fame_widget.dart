@@ -24,7 +24,7 @@ class HallOfFameWidget extends StatelessWidget {
             ),
           ),
         ),
-        12.verticalSpace,
+        12.vSpace,
         Text(
           name,
           style: AppStyles.text16PxMedium,
