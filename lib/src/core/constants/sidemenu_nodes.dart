@@ -6,41 +6,62 @@ class SidemenuNodes {
     ..addAll(
       [
         TreeNode(key: "Introduction", data: Icons.dashboard),
-        TreeNode(key: "Learn", data: Icons.description)
+        TreeNode(key: "Basic of Forex", data: Icons.description)
           ..addAll([
-            TreeNode(key: "Dart"),
-            TreeNode(key: "Flutter"),
+            TreeNode(key: "Pips"),
+            TreeNode(key: "Ask Bid"),
+            TreeNode(key: "Margin"),
+            TreeNode(key: "Brokers"),
+            TreeNode(key: "Platform"),
           ]),
-        TreeNode(key: "CandleSticks", data: Icons.cable)
+        TreeNode(key: "Candlesticks", data: Icons.cable)
           ..addAll([
-            TreeNode(key: "Basics")
-              ..addAll(
-                [
-                  TreeNode(key: "Bearish"),
-                  TreeNode(key: "Bullish"),
-                ],
-              ),
-            TreeNode(key: "Better")
-              ..addAll(
-                [
-                  TreeNode(key: "Wick"),
-                  TreeNode(key: "Morning Star"),
-                ],
-              ),
-            TreeNode(key: "Material"),
+            TreeNode(key: "What ? Why ? "),
+            TreeNode(key: "Important CandleSticks"),
           ]),
-        TreeNode(key: "CandleStick Patterns", data: Icons.cable)..addAll([]),
-        TreeNode(key: "Entry Models", data: Icons.analytics),
-        TreeNode(key: "Entry Models Example", data: Icons.collections_bookmark)
+        TreeNode(key: "CandleStick Patterns", data: Icons.cable)
           ..addAll([
+            TreeNode(key: "What ? Why ?"),
+            TreeNode(key: "5 best patterns"),
+          ]),
+        TreeNode(key: "Analysis", data: Icons.cable)
+          ..addAll([
+            TreeNode(key: "What ? Why ?"),
+            TreeNode(key: "Analyzing the market"),
+          ]),
+        TreeNode(key: "Market Terms", data: Icons.collections_bookmark)
+          ..addAll([
+            TreeNode(key: "What ? Why ?"),
+            TreeNode(key: "Support & Resistance"),
+            TreeNode(key: "FVG"),
+            TreeNode(key: "BOS"),
+            TreeNode(key: "CHoCH"),
+            TreeNode(key: "SSL"),
+            TreeNode(key: "BSL"),
+            TreeNode(key: "Trends"),
+            TreeNode(key: "MSS"),
+            TreeNode(key: "Fibonacci"),
+            TreeNode(key: "Indicators"),
+          ]),
+        TreeNode(key: "Indicators", data: Icons.cable)
+          ..addAll([
+            TreeNode(key: "What ? Why ?"),
+            TreeNode(key: "Important Indicators"),
+          ]),
+        TreeNode(key: "Entry Models", data: Icons.cable)
+          ..addAll([
+            TreeNode(key: "What ? Why ?"),
             TreeNode(key: "EM1"),
             TreeNode(key: "EM2"),
+            TreeNode(key: "EM3"),
+            TreeNode(key: "EM4"),
+            TreeNode(key: "EM5"),
           ]),
-        TreeNode(key: "Trading Rules", data: Icons.rule),
+        TreeNode(key: "Trading Plans", data: Icons.rule),
         TreeNode(key: "Big Players", data: Icons.brightness_1),
-        TreeNode(key: "What's next ?", data: Icons.brightness_1),
         TreeNode(key: "Profitable ? ", data: Icons.money),
-        TreeNode(key: "Settings", data: Icons.settings),
+        TreeNode(key: "The war", data: Icons.settings),
+        TreeNode(key: "The truth of trading", data: Icons.settings),
       ],
     );
 }
