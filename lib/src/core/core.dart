@@ -17,6 +17,7 @@ export 'widgets/custom_button.dart';
 
 export 'widgets/widgets.dart';
 
-export 'constants/app_constants.dart';
 export 'package:flutterguide/src/core/assets/assets.gen.dart';
 export 'widgets/image_type_enum.dart';
+
+export 'constants/constants.dart';

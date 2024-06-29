@@ -6,4 +6,6 @@ class AppConstants {
     Forex trading is the act of buying one currency while simultaneously selling another currency, with the aim of profiting from the changes in exchange rates.<br><br>
     Forex trading can be done by individuals, banks, and financial institutions, and is accessible <b>24 hours a day, five days a week</b>.
   ''';
+
+
 }
