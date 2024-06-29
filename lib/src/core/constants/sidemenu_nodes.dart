@@ -10,6 +10,8 @@ class SidemenuNodes {
           ..addAll([
             TreeNode(key: "Pips"),
             TreeNode(key: "Ask Bid"),
+            TreeNode(key: "Spread"),
+            TreeNode(key: "Lot Size"),
             TreeNode(key: "Margin"),
             TreeNode(key: "Brokers"),
             TreeNode(key: "Platform"),
@@ -47,6 +49,13 @@ class SidemenuNodes {
           ..addAll([
             TreeNode(key: "What ? Why ?"),
             TreeNode(key: "Important Indicators"),
+          ]),
+        TreeNode(key: "Strategies", data: Icons.cable)
+          ..addAll([
+            TreeNode(key: "Scalping"),
+            TreeNode(key: "Day Trading"),
+            TreeNode(key: "Swing Trading"),
+            TreeNode(key: "Position Trading"),
           ]),
         TreeNode(key: "Entry Models", data: Icons.cable)
           ..addAll([
