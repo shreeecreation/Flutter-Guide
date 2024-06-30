@@ -1,9 +1,7 @@
-import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:flutterguide/src/core/core.dart';
 import 'package:get/get.dart';
 
 import '../../../dashboard/pages/sidebar_menu.dart';
-import '../../../learn/presentation/pages/learn_dashboad_page.dart';
 
 class HomePageHelpers {
   List<Widget> drawerItems = [
@@ -34,7 +32,7 @@ class HomePageHelpers {
         Navigator.push(
             context!,
             MaterialPageRoute(
-                builder: (context) => SidebarMenu(
+                builder: (context) => const SidebarMenu(
                       menu: "Entry Models",
                     )));
       },

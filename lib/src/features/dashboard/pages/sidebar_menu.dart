@@ -193,7 +193,7 @@ class ScreensView extends StatelessWidget {
     Widget page;
     switch (menu) {
       case 'Introduction':
-        page = IntroductionPage();
+        page = const IntroductionPage();
         break;
       case 'Dart':
         page = const Center(
