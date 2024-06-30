@@ -21,6 +21,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/fc_logo.png
   AssetGenImage get fcLogo => const AssetGenImage('assets/images/fc_logo.png');
 
+  /// File path: assets/images/forex.jpg
+  AssetGenImage get forex => const AssetGenImage('assets/images/forex.jpg');
+
   /// File path: assets/images/forex_volume.webp
   AssetGenImage get forexVolume =>
       const AssetGenImage('assets/images/forex_volume.webp');
@@ -47,6 +50,7 @@ class $AssetsImagesGen {
   List<AssetGenImage> get values => [
         background,
         fcLogo,
+        forex,
         forexVolume,
         playstore,
         pnglogo,

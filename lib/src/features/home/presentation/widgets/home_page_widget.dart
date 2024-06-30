@@ -31,7 +31,12 @@ class HomePageHelpers {
     TextButton(
       onPressed: () {
         final context = Get.context;
-        Navigator.push(context!, MaterialPageRoute(builder: (context) => SidebarMenu()));
+        Navigator.push(
+            context!,
+            MaterialPageRoute(
+                builder: (context) => SidebarMenu(
+                      menu: "Entry Models",
+                    )));
       },
       child: Text("Entry Models", style: AppStyles.text18PxMedium.white),
     ),

@@ -1,4 +1,6 @@
+import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterguide/src/features/dashboard/pages/sidebar_menu.dart';
 import 'package:flutterguide/src/features/home/presentation/pages/home_page.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -40,7 +42,7 @@ class MyApp extends StatelessWidget {
           ),
           debugShowCheckedModeBanner: false,
           // home: const SplashPage(),
-          home: const HomePage(),
+          home: SidebarMenu(menu: "Entry Models"),
         );
       },
     );
