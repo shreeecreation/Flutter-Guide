@@ -7,26 +7,14 @@ class IntroductionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScaffoldWrapper(
+      backgroundColor: AppColors.greyColor,
       body: CustomScrollView(slivers: [
-        SliverAppBar(
-          backgroundColor: const Color.fromRGBO(238, 238, 238, 1),
-          shadowColor: const Color.fromRGBO(238, 238, 238, 1),
-          surfaceTintColor: const Color.fromRGBO(238, 238, 238, 1),
-          pinned: true,
-          centerTitle: false,
-          title: InkWell(
-            hoverColor: AppColors.transparent,
-            splashColor: AppColors.transparent,
-            onTap: () {},
-            child: Text(
-              "Introduction",
-              style: AppStyles.text24PxSemiBold.copyWith(color: const Color(0xFF4A68C9)),
-            ),
-          ),
+        const FlutterGuideAppBar(
+          title: "Introduction",
         ),
         SliverToBoxAdapter(
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 40.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
