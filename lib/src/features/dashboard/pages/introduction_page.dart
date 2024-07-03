@@ -9,9 +9,7 @@ class IntroductionPage extends StatelessWidget {
     return ScaffoldWrapper(
       backgroundColor: AppColors.greyColor,
       body: CustomScrollView(slivers: [
-        const FlutterGuideAppBar(
-          title: "Introduction",
-        ),
+        const FlutterGuideAppBar(title: "Learn Forex > Basics of Forex"),
         SliverToBoxAdapter(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40.0),

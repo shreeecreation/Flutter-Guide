@@ -10,6 +10,7 @@ class SidemenuNodes {
           ..addAll([
             TreeNode(key: "Pips"),
             TreeNode(key: "Ask Bid"),
+            TreeNode(key: "Leverage"),
             TreeNode(key: "Spread"),
             TreeNode(key: "Lot Size"),
             TreeNode(key: "Margin"),

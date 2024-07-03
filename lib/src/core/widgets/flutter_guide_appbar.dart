@@ -58,7 +58,7 @@ class FlutterGuideAppBar extends StatelessWidget {
         splashColor: AppColors.transparent,
         onTap: () {},
         child: Text(
-          "Introduction",
+          title,
           style: AppStyles.text20PxMedium.copyWith(color: const Color(0xFF4A68C9)),
         ),
       ),
