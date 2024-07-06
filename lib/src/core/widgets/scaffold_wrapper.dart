@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../core.dart';
+
 class ScaffoldWrapper extends StatelessWidget {
   const ScaffoldWrapper({
     Key? key,
@@ -89,7 +91,7 @@ class ScaffoldWrapper extends StatelessWidget {
         }
       },
       child: Scaffold(
-        
+        backgroundColor: AppColors.greyColor,
         key: key,
         appBar: appBar,
         body: body,
@@ -103,7 +105,6 @@ class ScaffoldWrapper extends StatelessWidget {
         onEndDrawerChanged: onEndDrawerChanged,
         bottomNavigationBar: bottomNavigationBar,
         bottomSheet: bottomSheet,
-        backgroundColor: backgroundColor,
         resizeToAvoidBottomInset: resizeToAvoidBottomInset,
         primary: primary,
         drawerDragStartBehavior: drawerDragStartBehavior,

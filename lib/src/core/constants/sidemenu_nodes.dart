@@ -9,13 +9,11 @@ class SidemenuNodes {
         TreeNode(key: "Basic of Forex", data: Icons.description)
           ..addAll([
             TreeNode(key: "Pips"),
-            TreeNode(key: "Ask Bid"), 
+            TreeNode(key: "Ask Bid"),
             TreeNode(key: "Leverage"),
-            TreeNode(key: "Spread"),
-            TreeNode(key: "Lot Size"),
+            TreeNode(key: "Spread and Lot Size"),
             TreeNode(key: "Margin"),
-            TreeNode(key: "Brokers"),
-            TreeNode(key: "Platform"),
+            TreeNode(key: "Brokers and Platforms"),
           ]),
         TreeNode(key: "Candlesticks", data: Icons.cable)
           ..addAll([

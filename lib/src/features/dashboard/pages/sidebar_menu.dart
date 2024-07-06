@@ -2,6 +2,7 @@ import 'package:animated_tree_view/animated_tree_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutterguide/src/core/core.dart';
+import 'basic_of_forex/basic_of_forex_page.dart';
 import 'blocs/blocs.dart';
 import 'pages.dart';
 
@@ -14,11 +15,11 @@ class SidebarMenu extends StatelessWidget {
       builder: (BuildContext context, Widget? child) => MultiBlocProvider(
         providers: [
           BlocProvider(
-            create: (_) => SidebarMenuBloc()..add(FetchSidebarMenuEvent(menu: "Introduction")),
+            create: (_) => SidebarMenuBloc()..add(FetchSidebarMenuEvent(menu: menu)),
           ),
         ],
         child: Builder(builder: (context) {
-          BlocProvider.of<SidebarMenuBloc>(context).add(FetchSidebarMenuEvent(menu: "Introduction"));
+          BlocProvider.of<SidebarMenuBloc>(context).add(FetchSidebarMenuEvent(menu: menu));
           return Scaffold(
             backgroundColor: const Color(0xFFe2e1e4),
             body: BlocBuilder<SidebarMenuBloc, SidebarMenuState>(
@@ -65,6 +66,7 @@ class SidebarMenu extends StatelessWidget {
                               child: Container(
                                 color: const Color(0xFF171719),
                                 child: TreeView.simple(
+                                  expansionBehavior: ExpansionBehavior.collapseOthers,
                                   showRootNode: false,
                                   tree: SidemenuNodes().menuTree,
                                   indentation: const Indentation(width: 0),
@@ -195,16 +197,8 @@ class ScreensView extends StatelessWidget {
       case 'Introduction':
         page = const IntroductionPage();
         break;
-      case 'Dart':
-        page = const Center(
-          child: Text(
-            "Dart Page",
-            style: TextStyle(
-              color: Color(0xFF171719),
-              fontSize: 22,
-            ),
-          ),
-        );
+      case 'Basic of Forex':
+        page = BasicOfForexPage();
         break;
       default:
         page = const Center(

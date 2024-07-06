@@ -33,7 +33,7 @@ class HomePageHelpers {
             context!,
             MaterialPageRoute(
                 builder: (context) => const SidebarMenu(
-                      menu: "Entry Models",
+                      menu: "Basic of Forex",
                     )));
       },
       child: Text("Entry Models", style: AppStyles.text18PxMedium.white),

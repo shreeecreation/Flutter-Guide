@@ -1,8 +1,5 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutterguide/src/core/core.dart';
-
-import 'blocs/blocs.dart';
 
 class IntroductionPage extends StatelessWidget {
   const IntroductionPage({super.key});
@@ -10,7 +7,6 @@ class IntroductionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScaffoldWrapper(
-      backgroundColor: AppColors.greyColor,
       body: CustomScrollView(
         slivers: [
           const FlutterGuideAppBar(title: "Learn Forex - Introduction"),
