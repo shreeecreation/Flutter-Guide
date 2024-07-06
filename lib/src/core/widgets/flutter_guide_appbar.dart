@@ -46,9 +46,8 @@ class FlutterGuideAppBar extends StatelessWidget {
         ],
       ),
       automaticallyImplyLeading: false,
-      foregroundColor: const Color.fromARGB(255, 254, 243, 243),
-      backgroundColor: AppColors.greyColor,
-      surfaceTintColor: const Color.fromARGB(255, 254, 243, 243),
+      // shadowColor: Color(0xFFbde0fe),
+      backgroundColor: const Color(0xFFd9d9d9),
       centerTitle: false,
       pinned: true,
       // snap: true,
@@ -59,7 +58,7 @@ class FlutterGuideAppBar extends StatelessWidget {
         onTap: () {},
         child: Text(
           title,
-          style: AppStyles.text20PxMedium.copyWith(color: const Color(0xFF4A68C9)),
+          style: AppStyles.text18PxMedium.copyWith(color: Color.fromARGB(255, 0, 0, 0)),
         ),
       ),
     );

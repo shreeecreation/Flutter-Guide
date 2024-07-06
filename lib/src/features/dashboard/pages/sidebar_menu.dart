@@ -18,7 +18,7 @@ class SidebarMenu extends StatelessWidget {
           ),
         ],
         child: Builder(builder: (context) {
-          BlocProvider.of<SidebarMenuBloc>(context).add(FetchSidebarMenuEvent(menu: "Pips"));
+          BlocProvider.of<SidebarMenuBloc>(context).add(FetchSidebarMenuEvent(menu: "Introduction"));
           return Scaffold(
             backgroundColor: const Color(0xFFe2e1e4),
             body: BlocBuilder<SidebarMenuBloc, SidebarMenuState>(

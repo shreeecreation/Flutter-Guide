@@ -5,3 +5,4 @@ export 'custom_dialog_box.dart';
 export 'custom_icon_button.dart';
 export 'scaffold_wrapper.dart';
 export 'flutter_guide_appbar.dart';
+export 'next_widget.dart';
