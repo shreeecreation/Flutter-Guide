@@ -1,4 +1,3 @@
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutterguide/src/core/core.dart';
 
 class FlutterGuideAppBar extends StatelessWidget {
@@ -58,7 +57,7 @@ class FlutterGuideAppBar extends StatelessWidget {
         onTap: () {},
         child: Text(
           title,
-          style: AppStyles.text18PxMedium.copyWith(color: Color.fromARGB(255, 0, 0, 0)),
+          style: AppStyles.text18PxMedium.copyWith(color: const Color.fromARGB(255, 0, 0, 0)),
         ),
       ),
     );

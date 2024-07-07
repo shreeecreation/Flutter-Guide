@@ -1,4 +1,3 @@
-import 'package:animated_tree_view/animated_tree_view.dart';
 import 'package:flutterguide/src/core/core.dart';
 
 class SidemenuNodes {
@@ -9,9 +8,9 @@ class SidemenuNodes {
         TreeNode(key: "Basic of Forex", data: Icons.description)
           ..addAll([
             TreeNode(key: "Pips"),
-            TreeNode(key: "Ask Bid"),
+            TreeNode(key: "Ask Bid Spread"),
             TreeNode(key: "Leverage"),
-            TreeNode(key: "Spread and Lot Size"),
+            TreeNode(key: "Lot Size"),
             TreeNode(key: "Margin"),
             TreeNode(key: "Brokers and Platforms"),
           ]),

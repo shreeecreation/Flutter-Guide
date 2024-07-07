@@ -1,8 +1,4 @@
-import 'package:animated_tree_view/animated_tree_view.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutterguide/src/core/core.dart';
-import 'basic_of_forex/basic_of_forex_page.dart';
 import 'blocs/blocs.dart';
 import 'pages.dart';
 
@@ -184,33 +180,5 @@ class SidebarMenu extends StatelessWidget {
         }),
       ),
     );
-  }
-}
-
-class ScreensView extends StatelessWidget {
-  final String menu;
-  const ScreensView({Key? key, required this.menu}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    Widget page;
-    switch (menu) {
-      case 'Introduction':
-        page = const IntroductionPage();
-        break;
-      case 'Basic of Forex':
-        page = BasicOfForexPage();
-        break;
-      default:
-        page = const Center(
-          child: Text(
-            "Other Page",
-            style: TextStyle(
-              color: Color(0xFF171719),
-              fontSize: 22,
-            ),
-          ),
-        );
-    }
-    return page;
   }
 }

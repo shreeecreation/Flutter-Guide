@@ -1,4 +1,3 @@
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutterguide/src/core/core.dart';
 
 class BasicOfForexPage extends StatelessWidget {
