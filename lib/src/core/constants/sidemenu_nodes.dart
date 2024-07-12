@@ -11,7 +11,7 @@ class SidemenuNodes {
             TreeNode(key: "Ask Bid Spread"),
             TreeNode(key: "Leverage"),
             TreeNode(key: "Lot Size"),
-            TreeNode(key: "Margin"),
+            TreeNode(key: "SL, TP, BE, TSL"),
             TreeNode(key: "Brokers and Platforms"),
           ]),
         TreeNode(key: "Candlesticks", data: Icons.cable)

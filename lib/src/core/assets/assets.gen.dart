@@ -30,6 +30,7 @@ class $AssetsImagesGen {
 
   $AssetsImagesHallOfNamesGen get hallOfNames =>
       const $AssetsImagesHallOfNamesGen();
+  $AssetsImagesPipsGen get pips => const $AssetsImagesPipsGen();
 
   /// File path: assets/images/playstore.png
   AssetGenImage get playstore =>
@@ -94,6 +95,20 @@ class $AssetsImagesHallOfNamesGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [bill, george, marcus, paul, stanley];
+}
+
+class $AssetsImagesPipsGen {
+  const $AssetsImagesPipsGen();
+
+  /// File path: assets/images/pips/askbid.jpeg
+  AssetGenImage get askbid =>
+      const AssetGenImage('assets/images/pips/askbid.jpeg');
+
+  /// File path: assets/images/pips/pips.jpeg
+  AssetGenImage get pips => const AssetGenImage('assets/images/pips/pips.jpeg');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [askbid, pips];
 }
 
 class Assets {

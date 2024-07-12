@@ -25,3 +25,5 @@ export 'package:flutter_bloc/flutter_bloc.dart';
 
 export 'package:flutter_screenutil/flutter_screenutil.dart';
 export 'package:animated_tree_view/animated_tree_view.dart';
+
+export 'helpers/html_style_helper.dart';

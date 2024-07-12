@@ -18,6 +18,12 @@ class ScreensView extends StatelessWidget {
       case 'Pips':
         page = const PipsPage();
         break;
+      case 'Ask Bid Spread':
+        page = const AskBidPage();
+        break;
+      case 'Leverage':
+        page = const LeveragePage();
+        break;
       default:
         page = const Center(
           child: Text(

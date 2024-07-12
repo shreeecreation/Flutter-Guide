@@ -55,6 +55,7 @@ flutter:
     - assets/images/
     - assets/images/hall_of_names/
     - assets/svg/
+    - assets/images/pips/
 
 flutter_gen:
   output: lib/src/core/assets/
