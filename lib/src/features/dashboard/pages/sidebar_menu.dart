@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutterguide/src/core/core.dart';
 import 'blocs/blocs.dart';
 import 'pages.dart';
@@ -76,7 +78,8 @@ class SidebarMenu extends StatelessWidget {
                                   },
                                   onItemTap: (item) {
                                     BlocProvider.of<SidebarMenuBloc>(context).add(FetchSidebarMenuEvent(menu: item.key));
-                                    print(item.key);
+                                    // log('Pressed item', name : 'SidebarMenu')
+                                    log('Pressed item', name: item.key );
                                   },
                                   builder: (context, node) {
                                     final isSelected = state.menu == node.key;

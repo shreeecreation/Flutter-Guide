@@ -11,7 +11,15 @@ class HomePageHelpers {
         "Learn",
         style: AppStyles.text18PxMedium,
       ),
-      onTap: () {},
+      onTap: () {
+        final context = Get.context;
+        Navigator.push(
+            context!,
+            MaterialPageRoute(
+                builder: (context) => const SidebarMenu(
+                      menu: "Introduction",
+                    )));
+      },
     ),
     ListTile(
       leading: const Icon(Icons.contact_phone),
@@ -33,7 +41,7 @@ class HomePageHelpers {
             context!,
             MaterialPageRoute(
                 builder: (context) => const SidebarMenu(
-                      menu: "Basic of Forex",
+                      menu: "Pips",
                     )));
       },
       child: Text("Entry Models", style: AppStyles.text18PxMedium.white),

@@ -3,6 +3,7 @@ import 'package:flutterguide/src/features/dashboard/pages/sidebar_menu.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'src/app/splash/presentation/pages/splash_page.dart';
 import 'src/core/helpers/adaptive_helper.dart';
 import 'src/core/widgets/adaptive_sizer_widget.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
           ),
           debugShowCheckedModeBanner: false,
           // home: const SplashPage(),
-          home: const SidebarMenu(menu: "Introduction"),
+          home: const SidebarMenu(menu: "Leverage"),
         );
       },
     );

@@ -178,6 +178,7 @@ abstract class AppStyles {
     fontWeight: FontWeight.w500,
     height: calculateHeight(21, 18),
     fontStyle: FontStyle.normal,
+    textStyle: TextStyle(wordSpacing: 2, height: 1.2),
   );
 
   //SemiBold
