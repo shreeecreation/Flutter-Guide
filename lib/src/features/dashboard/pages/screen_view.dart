@@ -1,5 +1,4 @@
 import 'package:flutterguide/src/core/core.dart';
-
 import 'pages.dart';
 
 class ScreensView extends StatelessWidget {
@@ -23,6 +22,9 @@ class ScreensView extends StatelessWidget {
         break;
       case 'Leverage':
         page = const LeveragePage();
+        break;
+      case 'Lot Size':
+        page = const LotSizePage();
         break;
       default:
         page = const Center(

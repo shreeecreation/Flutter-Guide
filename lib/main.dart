@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
           ),
           debugShowCheckedModeBanner: false,
           // home: const SplashPage(),
-          home: const SidebarMenu(menu: "Leverage"),
+          home: const SidebarMenu(menu: "Lot Size"),
         );
       },
     );
