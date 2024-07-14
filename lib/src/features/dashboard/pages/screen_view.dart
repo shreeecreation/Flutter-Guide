@@ -26,6 +26,9 @@ class ScreensView extends StatelessWidget {
       case 'Lot Size':
         page = const LotSizePage();
         break;
+      case 'SL, TP, BE, TSL':
+        page = const SlTpPage();
+        break;
       default:
         page = const Center(
           child: Text(

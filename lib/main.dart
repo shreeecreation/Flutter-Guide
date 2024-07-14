@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
           ),
           debugShowCheckedModeBanner: false,
           // home: const SplashPage(),
-          home: const SidebarMenu(menu: "Lot Size"),
+          home: const SidebarMenu(menu: "SL, TP, BE, TSL"),
         );
       },
     );
