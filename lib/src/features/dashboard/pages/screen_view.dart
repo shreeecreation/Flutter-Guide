@@ -29,6 +29,9 @@ class ScreensView extends StatelessWidget {
       case 'SL, TP, BE, TSL':
         page = const SlTpPage();
         break;
+      case 'Brokers and Platforms':
+        page = const BrokerPlatformPage();
+        break;
       default:
         page = const Center(
           child: Text(

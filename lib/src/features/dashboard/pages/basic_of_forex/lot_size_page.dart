@@ -19,14 +19,13 @@ class LotSizePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   30.verticalSpace,
-                  Text("Leverage", style: AppStyles.text24PxBold),
+                  Text("LotSize", style: AppStyles.text24PxBold),
                   10.verticalSpace,
                   Text(
                     "Leverage is a crucial part in the trading where most trader are getting trapped at their initial stages.",
                     style: AppStyles.text18PxMedium,
                   ),
                   Html(
-                  
                     data: LotSizeContents().lotSizeIntroduction,
                     style: {
                       "h2": HtmlStyleHelper.htmlStyle(fontSize: 19, fontWeight: FontWeight.w600),
