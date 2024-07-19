@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
           ),
           debugShowCheckedModeBanner: false,
           // home: const SplashPage(),
-          home: const SidebarMenu(menu: "Brokers and Platforms"),
+          home: const SidebarMenu(menu: "Candlesticks"),
         );
       },
     );

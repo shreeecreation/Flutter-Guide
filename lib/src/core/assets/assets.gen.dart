@@ -18,6 +18,10 @@ class $AssetsImagesGen {
   AssetGenImage get background =>
       const AssetGenImage('assets/images/background.jpg');
 
+  /// File path: assets/images/candlestick.jpeg
+  AssetGenImage get candlestick =>
+      const AssetGenImage('assets/images/candlestick.jpeg');
+
   /// File path: assets/images/fc_logo.png
   AssetGenImage get fcLogo => const AssetGenImage('assets/images/fc_logo.png');
 
@@ -50,6 +54,7 @@ class $AssetsImagesGen {
   /// List of all assets
   List<AssetGenImage> get values => [
         background,
+        candlestick,
         fcLogo,
         forex,
         forexVolume,

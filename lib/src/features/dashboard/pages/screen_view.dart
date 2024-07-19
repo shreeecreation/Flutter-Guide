@@ -32,6 +32,12 @@ class ScreensView extends StatelessWidget {
       case 'Brokers and Platforms':
         page = const BrokerPlatformPage();
         break;
+      case 'Candlesticks':
+        page = const CandlesticksPage();
+        break;
+      case 'Candlestick What ? Why ?':
+        page = const WhatWhyCandlestick();
+        break;
       default:
         page = const Center(
           child: Text(
