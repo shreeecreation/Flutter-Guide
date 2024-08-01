@@ -1,4 +1,6 @@
 import 'package:flutterguide/src/core/core.dart';
+import 'package:flutterguide/src/features/dashboard/pages/candlesticks/candlestick_patterns_page.dart';
+import 'package:flutterguide/src/features/dashboard/pages/candlesticks/important_candlesticks.dart';
 import 'pages.dart';
 
 class ScreensView extends StatelessWidget {
@@ -37,6 +39,12 @@ class ScreensView extends StatelessWidget {
         break;
       case 'Candlestick What ? Why ?':
         page = const WhatWhyCandlestick();
+        break;
+      case 'Important CandleSticks':
+        page = const ImportantCandleSticks();
+        break;
+      case 'CandleStick Patterns':
+        page = const CandlestickPatternsPage();
         break;
       default:
         page = const Center(

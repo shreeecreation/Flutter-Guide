@@ -10,3 +10,5 @@ export 'basic_of_forex/broker_platform_page.dart';
 
 export 'candlesticks/candlestick_page.dart';
 export 'candlesticks/what_why_candlestick.dart';
+export 'candlesticks/important_candlesticks.dart';
+export 'candlesticks/candlestick_patterns_page.dart';

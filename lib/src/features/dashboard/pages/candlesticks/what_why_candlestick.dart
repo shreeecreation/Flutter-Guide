@@ -69,5 +69,7 @@ class WhatWhyCandlestickContents {
     <li><strong>Historical Data</strong>: By examining past candlestick patterns, traders can identify historical price levels that acted as support or resistance. This historical analysis can help predict future price movements.</li>
     <li><strong>Versatility</strong>: Candlesticks can be used across different time frames, from minutes to months, making them versatile tools for both short-term and long-term traders.</li>
 </ol>
+<img src="" alt="Candlestick Image" width="100%" height="auto">
+
 ''';
 }
