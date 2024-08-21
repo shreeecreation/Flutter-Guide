@@ -18,12 +18,32 @@ class $AssetsImagesGen {
   AssetGenImage get background =>
       const AssetGenImage('assets/images/background.jpg');
 
+  /// File path: assets/images/bos.jpeg
+  AssetGenImage get bos => const AssetGenImage('assets/images/bos.jpeg');
+
+  /// File path: assets/images/bsl.jpeg
+  AssetGenImage get bsl => const AssetGenImage('assets/images/bsl.jpeg');
+
   /// File path: assets/images/candlestick.jpeg
   AssetGenImage get candlestick =>
       const AssetGenImage('assets/images/candlestick.jpeg');
 
+  /// File path: assets/images/candlestick_patterns.jpg
+  AssetGenImage get candlestickPatterns =>
+      const AssetGenImage('assets/images/candlestick_patterns.jpg');
+
+  /// File path: assets/images/choch.jpeg
+  AssetGenImage get choch => const AssetGenImage('assets/images/choch.jpeg');
+
+  /// File path: assets/images/ema.jpeg
+  AssetGenImage get ema => const AssetGenImage('assets/images/ema.jpeg');
+
   /// File path: assets/images/fc_logo.png
   AssetGenImage get fcLogo => const AssetGenImage('assets/images/fc_logo.png');
+
+  /// File path: assets/images/fibonacci.jpeg
+  AssetGenImage get fibonacci =>
+      const AssetGenImage('assets/images/fibonacci.jpeg');
 
   /// File path: assets/images/forex.jpg
   AssetGenImage get forex => const AssetGenImage('assets/images/forex.jpg');
@@ -32,8 +52,16 @@ class $AssetsImagesGen {
   AssetGenImage get forexVolume =>
       const AssetGenImage('assets/images/forex_volume.webp');
 
+  /// File path: assets/images/fvg.jpeg
+  AssetGenImage get fvg => const AssetGenImage('assets/images/fvg.jpeg');
+
   $AssetsImagesHallOfNamesGen get hallOfNames =>
       const $AssetsImagesHallOfNamesGen();
+
+  /// File path: assets/images/liquidity.jpeg
+  AssetGenImage get liquidity =>
+      const AssetGenImage('assets/images/liquidity.jpeg');
+
   $AssetsImagesPipsGen get pips => const $AssetsImagesPipsGen();
 
   /// File path: assets/images/playstore.png
@@ -43,6 +71,20 @@ class $AssetsImagesGen {
   /// File path: assets/images/pnglogo.png
   AssetGenImage get pnglogo => const AssetGenImage('assets/images/pnglogo.png');
 
+  /// File path: assets/images/rsi.jpeg
+  AssetGenImage get rsi => const AssetGenImage('assets/images/rsi.jpeg');
+
+  /// File path: assets/images/ssl.jpeg
+  AssetGenImage get ssl => const AssetGenImage('assets/images/ssl.jpeg');
+
+  /// File path: assets/images/support_resistance.jpeg
+  AssetGenImage get supportResistance =>
+      const AssetGenImage('assets/images/support_resistance.jpeg');
+
+  /// File path: assets/images/support_resistance_2.jpeg
+  AssetGenImage get supportResistance2 =>
+      const AssetGenImage('assets/images/support_resistance_2.jpeg');
+
   /// File path: assets/images/trading_protrait.jpg
   AssetGenImage get tradingProtrait =>
       const AssetGenImage('assets/images/trading_protrait.jpg');
@@ -51,17 +93,33 @@ class $AssetsImagesGen {
   AssetGenImage get transparentLogo =>
       const AssetGenImage('assets/images/transparent_logo.png');
 
+  /// File path: assets/images/volume.jpeg
+  AssetGenImage get volume => const AssetGenImage('assets/images/volume.jpeg');
+
   /// List of all assets
   List<AssetGenImage> get values => [
         background,
+        bos,
+        bsl,
         candlestick,
+        candlestickPatterns,
+        choch,
+        ema,
         fcLogo,
+        fibonacci,
         forex,
         forexVolume,
+        fvg,
+        liquidity,
         playstore,
         pnglogo,
+        rsi,
+        ssl,
+        supportResistance,
+        supportResistance2,
         tradingProtrait,
-        transparentLogo
+        transparentLogo,
+        volume
       ];
 }
 

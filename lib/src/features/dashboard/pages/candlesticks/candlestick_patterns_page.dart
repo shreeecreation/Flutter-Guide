@@ -32,22 +32,17 @@ class CandlestickPatternsPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "•  What is Candlesticks",
+                          "•  What are candlestick patterns ?",
                           style: AppStyles.text18PxSemiBold,
                         ),
                         5.verticalSpace,
                         Text(
-                          "•  Components of candlesticks",
+                          "• What candlestick patterns shows",
                           style: AppStyles.text18PxSemiBold,
                         ),
                         5.verticalSpace,
                         Text(
-                          "•  Why is candlesticks are used",
-                          style: AppStyles.text18PxSemiBold,
-                        ),
-                        5.verticalSpace,
-                        Text(
-                          "•  5 important types of candlesticks",
+                          "•  Important candlesticks patterns",
                           style: AppStyles.text18PxSemiBold,
                         ),
                       ],
@@ -55,7 +50,7 @@ class CandlestickPatternsPage extends StatelessWidget {
                   ),
                   30.verticalSpace,
                   Text(
-                    "We will walk through this topics and get a clear understanding about the candlesticks.",
+                    "We will walk through this topics and get a clear understanding about the candlesticks patterns in this chapter.",
                     style: AppStyles.text16Px,
                     textAlign: TextAlign.center,
                   ),

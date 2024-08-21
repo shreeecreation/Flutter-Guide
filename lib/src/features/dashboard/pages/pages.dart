@@ -12,3 +12,9 @@ export 'candlesticks/candlestick_page.dart';
 export 'candlesticks/what_why_candlestick.dart';
 export 'candlesticks/important_candlesticks.dart';
 export 'candlesticks/candlestick_patterns_page.dart';
+export 'candlesticks/what_why_candlestick_pattern_page.dart';
+
+
+export 'market_terms/market_terms_page.dart';
+export 'market_terms/support_resistence_page.dart';
+export 'market_terms/fvg_page.dart';

@@ -18,15 +18,15 @@ class SidemenuNodes {
           ..addAll([
             TreeNode(key: "Candlestick What ? Why ?"),
             TreeNode(key: "Important CandleSticks"),
+            // TreeNode(key: "Important candlesticks patterns"),
           ]),
         TreeNode(key: "CandleStick Patterns", data: Icons.cable)
           ..addAll([
-            TreeNode(key: "What ? Why ?"),
+            TreeNode(key: "CandleStick Patterns What ? Why ?"),
             TreeNode(key: "Important Candlestick Patterns"),
           ]),
         TreeNode(key: "Market Terms", data: Icons.collections_bookmark)
           ..addAll([
-            TreeNode(key: "What ? Why ?"),
             TreeNode(key: "Support & Resistance"),
             TreeNode(key: "FVG"),
             TreeNode(key: "BOS & ChoCh"),

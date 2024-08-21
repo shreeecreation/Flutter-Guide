@@ -1,6 +1,8 @@
 import 'package:flutterguide/src/core/core.dart';
-import 'package:flutterguide/src/features/dashboard/pages/candlesticks/candlestick_patterns_page.dart';
-import 'package:flutterguide/src/features/dashboard/pages/candlesticks/important_candlesticks.dart';
+import 'package:flutterguide/src/features/dashboard/pages/candlesticks/important_candlestick_patterns.dart';
+import 'package:flutterguide/src/features/dashboard/pages/market_terms/bos_choch_page.dart';
+import 'package:flutterguide/src/features/dashboard/pages/market_terms/fvg_page.dart';
+import 'package:flutterguide/src/features/dashboard/pages/market_terms/market_terms_page.dart';
 import 'pages.dart';
 
 class ScreensView extends StatelessWidget {
@@ -45,6 +47,24 @@ class ScreensView extends StatelessWidget {
         break;
       case 'CandleStick Patterns':
         page = const CandlestickPatternsPage();
+        break;
+
+      case 'CandleStick Patterns What ? Why ?':
+        page = const CandlestickPatternsWhatWhy();
+        break;
+      case 'Important Candlestick Patterns':
+        page = const ImportantCandlestickPatterns();
+        break;
+      case 'Market Terms':
+        page = const MarketTermsPage();
+        break;
+      case 'Support & Resistance':
+        page = const SupportResistancePage();
+        break;
+      case 'FVG':
+        page = const FvgPage();
+      case 'BOS & ChoCh':
+        page = const BosChochPage();
         break;
       default:
         page = const Center(
