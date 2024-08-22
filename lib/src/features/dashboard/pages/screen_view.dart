@@ -66,6 +66,15 @@ class ScreensView extends StatelessWidget {
       case 'BOS & ChoCh':
         page = const BosChochPage();
         break;
+      case 'Liquidity':
+        page = const LiquidityPage();
+        break;
+      case 'SSL & BSL':
+        page = const SslBslPage();
+        break;
+      case 'Indicators':
+        page = const IndicatorsPage();
+        break;
       default:
         page = const Center(
           child: Text(

@@ -30,8 +30,8 @@ class SidemenuNodes {
             TreeNode(key: "Support & Resistance"),
             TreeNode(key: "FVG"),
             TreeNode(key: "BOS & ChoCh"),
-            TreeNode(key: "SSL & BSL"),
             TreeNode(key: "Liquidity"),
+            TreeNode(key: "SSL & BSL"),
           ]),
         TreeNode(key: "Indicators", data: Icons.collections_bookmark)
           ..addAll([

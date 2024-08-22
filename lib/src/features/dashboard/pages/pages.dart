@@ -18,3 +18,8 @@ export 'candlesticks/what_why_candlestick_pattern_page.dart';
 export 'market_terms/market_terms_page.dart';
 export 'market_terms/support_resistence_page.dart';
 export 'market_terms/fvg_page.dart';
+export 'market_terms/ssl_bsl_page.dart';
+export 'market_terms/liquidity_page.dart';
+
+
+export 'indicators/indicators_page.dart';
