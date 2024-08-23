@@ -39,8 +39,8 @@ class MyApp extends StatelessWidget {
             fontFamily: GoogleFonts.zillaSlab().fontFamily,
           ),
           debugShowCheckedModeBanner: false,
-          // home: const SplashPage(),
-          home: const SidebarMenu(menu: "Indicators"),
+          home: const SplashPage(),
+          // home: const SidebarMenu(menu: "Indicators"),
         );
       },
     );
