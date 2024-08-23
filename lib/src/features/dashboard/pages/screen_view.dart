@@ -1,5 +1,8 @@
 import 'package:flutterguide/src/core/core.dart';
 import 'package:flutterguide/src/features/dashboard/pages/candlesticks/important_candlestick_patterns.dart';
+import 'package:flutterguide/src/features/dashboard/pages/indicators/fixed_volume_profile_page.dart';
+import 'package:flutterguide/src/features/dashboard/pages/indicators/rsi_page.dart';
+import 'package:flutterguide/src/features/dashboard/pages/indicators/volume_page.dart';
 import 'package:flutterguide/src/features/dashboard/pages/market_terms/bos_choch_page.dart';
 import 'package:flutterguide/src/features/dashboard/pages/market_terms/fvg_page.dart';
 import 'package:flutterguide/src/features/dashboard/pages/market_terms/market_terms_page.dart';
@@ -74,6 +77,18 @@ class ScreensView extends StatelessWidget {
         break;
       case 'Indicators':
         page = const IndicatorsPage();
+        break;
+      case 'Fibonacci':
+        page = const FibonacciPage();
+        break;
+      case 'Volume':
+        page = const VolumePage();
+        break;
+      case 'RSI':
+        page = const RSIPage();
+        break;
+      case 'Fixed Volume Profile':
+        page = const FixedVolumeProfilePage();
         break;
       default:
         page = const Center(

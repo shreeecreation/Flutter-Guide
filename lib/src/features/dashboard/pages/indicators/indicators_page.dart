@@ -57,7 +57,7 @@ class IndicatorsPage extends StatelessWidget {
                         ),
                         5.verticalSpace,
                         Text(
-                          "•  VOlume Profile",
+                          "•  Volume Profile",
                           style: AppStyles.text18PxSemiBold,
                         ),
                       ],

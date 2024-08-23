@@ -55,6 +55,15 @@ class $AssetsImagesGen {
   /// File path: assets/images/fvg.jpeg
   AssetGenImage get fvg => const AssetGenImage('assets/images/fvg.jpeg');
 
+  /// File path: assets/images/fvp1.jpeg
+  AssetGenImage get fvp1 => const AssetGenImage('assets/images/fvp1.jpeg');
+
+  /// File path: assets/images/fvp2.jpeg
+  AssetGenImage get fvp2 => const AssetGenImage('assets/images/fvp2.jpeg');
+
+  /// File path: assets/images/fvp3.jpeg
+  AssetGenImage get fvp3 => const AssetGenImage('assets/images/fvp3.jpeg');
+
   $AssetsImagesHallOfNamesGen get hallOfNames =>
       const $AssetsImagesHallOfNamesGen();
 
@@ -110,6 +119,9 @@ class $AssetsImagesGen {
         forex,
         forexVolume,
         fvg,
+        fvp1,
+        fvp2,
+        fvp3,
         liquidity,
         playstore,
         pnglogo,

@@ -35,18 +35,12 @@ class SidemenuNodes {
           ]),
         TreeNode(key: "Indicators", data: Icons.collections_bookmark)
           ..addAll([
-            TreeNode(key: "What ? Why ?"),
             TreeNode(key: "Fibonacci"),
             TreeNode(key: "Volume"),
             TreeNode(key: "RSI"),
-            TreeNode(key: "EMA"),
             TreeNode(key: "Fixed Volume Profile"),
           ]),
         TreeNode(key: "Type of Traders", data: Icons.cable),
-        TreeNode(key: "Analysis", data: Icons.cable)
-          ..addAll([
-            TreeNode(key: "What ? Why ?"),
-          ]),
         TreeNode(key: "Entry Models", data: Icons.cable)
           ..addAll([
             TreeNode(key: "What ? Why ?"),

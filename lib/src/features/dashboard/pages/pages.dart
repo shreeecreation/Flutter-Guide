@@ -23,3 +23,5 @@ export 'market_terms/liquidity_page.dart';
 
 
 export 'indicators/indicators_page.dart';
+export 'indicators/fibonacci_page.dart';
+export 'indicators/volume_page.dart';
