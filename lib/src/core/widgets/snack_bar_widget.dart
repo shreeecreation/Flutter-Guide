@@ -43,10 +43,9 @@ class SnackbarWidget extends StatelessWidget {
                       title,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style:
-                          AppStyles.text14PxMedium.copyWith(color: textColor),
+                      style: AppStyles.text14PxMedium.copyWith(color: textColor),
                     ),
-                    10.verticalSpace,
+                    10.vSpace,
                     Text(
                       message,
                       style: AppStyles.text14Px.copyWith(color: textColor),

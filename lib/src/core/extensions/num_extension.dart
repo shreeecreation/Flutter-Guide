@@ -15,11 +15,9 @@ extension NumExtensionX on num {
 
   Duration get days => Duration(days: toInt());
 
-  Future<int> get delayedMicroSeconds async =>
-      Future.delayed(toInt().microseconds);
+  Future<int> get delayedMicroSeconds async => Future.delayed(toInt().microseconds);
 
-  Future<int> get delayedMilliSeconds async =>
-      Future.delayed(toInt().milliseconds);
+  Future<int> get delayedMilliSeconds async => Future.delayed(toInt().milliseconds);
 
   Future<int> get delayedSeconds async => await Future.delayed(toInt().seconds);
 
@@ -51,18 +49,15 @@ extension ResponsiveSizeExt on num {
 
   double get sp => AdaptiveHelper().setSp(this);
 
-  Widget get verticalSpace => AdaptiveHelper().setVerticalSpacing(this);
+  Widget get vSpace => AdaptiveHelper().setVerticalSpacing(this);
 
-  Widget get verticalSpaceRadius =>
-      AdaptiveHelper().setVerticalSpacingRadius(this);
+  Widget get verticalSpaceRadius => AdaptiveHelper().setVerticalSpacingRadius(this);
 
-  Widget get horizontalSpace => AdaptiveHelper().setHorizontalSpacing(this);
+  Widget get hSpace => AdaptiveHelper().setHorizontalSpacing(this);
 
-  Widget get horizontalSpaceRadius =>
-      AdaptiveHelper().setHorizontalSpacingRadius(this);
+  Widget get horizontalSpaceRadius => AdaptiveHelper().setHorizontalSpacingRadius(this);
 }
 
 extension EdgeInsetsX on EdgeInsets {
-  EdgeInsets get r =>
-      copyWith(top: top.r, left: left.r, right: right.r, bottom: bottom.r);
+  EdgeInsets get r => copyWith(top: top.r, left: left.r, right: right.r, bottom: bottom.r);
 }
