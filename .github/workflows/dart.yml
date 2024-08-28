@@ -1,0 +1,51 @@
+name: Flutter CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.10.5'  # Specify your desired Flutter version
+
+    - name: Install dependencies
+      run: flutter pub get
+
+    - name: Run Flutter analyzer
+      run: flutter analyze
+
+    - name: Run Flutter tests
+      run: flutter test
+
+    - name: Build APK
+      run: flutter build apk --release
+
+    - name: Set up Firebase CLI
+      uses: w9jds/firebase-action@v1
+      with:
+        args: --token ${{1//0g4Ityq6PjjFhCgYIARAAGBASNwF-L9IrMR7Pwg4Ljm3EfDoCak5tGLQaO45Q1rAtcR72NA-E_vwKDm5x__1Hv4MwU6fCQ1Ao1Kc}}
+
+    - name: Upload to Firebase App Distribution
+      run: |
+        firebase appdistribution:distribute build/app/outputs/flutter-apk/app-release.apk \
+          --app ${{1:243779894782:android:501b3cdebb2c3323c9d4af}} \
+          --groups testers \
+          --release-notes "Automated build from GitHub Actions"
+    - name: Upload APK to GitHub
+      uses: actions/upload-artifact@v3
+      with:
+        name: app-release.apk
+        path: build/app/outputs/flutter-apk/app-release.apk
