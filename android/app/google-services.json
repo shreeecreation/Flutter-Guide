@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "243779894782",
+    "project_id": "forex-b5fd7",
+    "storage_bucket": "forex-b5fd7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243779894782:android:501b3cdebb2c3323c9d4af",
+        "android_client_info": {
+          "package_name": "com.example.flutterguide"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBh9h7qXM0PUoCjyprAu9oQRKYKV76KrTI"
+        }
+      ],
+    "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
