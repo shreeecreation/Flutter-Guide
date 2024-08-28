@@ -33,11 +33,6 @@ jobs:
     - name: Build APK
       run: flutter build apk --release
 
-    - name: Set up Firebase CLI
-      uses: w9jds/firebase-action@v1
-      with:
-        args: --token ${{1//0g4Ityq6PjjFhCgYIARAAGBASNwF-L9IrMR7Pwg4Ljm3EfDoCak5tGLQaO45Q1rAtcR72NA-E_vwKDm5x__1Hv4MwU6fCQ1Ao1Kc}}
-
     - name: Upload to Firebase App Distribution
       run: |
         firebase appdistribution:distribute build/app/outputs/flutter-apk/app-release.apk \
