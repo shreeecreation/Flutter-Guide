@@ -43,12 +43,11 @@ class SidemenuNodes {
         TreeNode(key: "Type of Traders", data: Icons.cable),
         TreeNode(key: "Entry Models", data: Icons.cable)
           ..addAll([
-            TreeNode(key: "What ? Why ?"),
             TreeNode(key: "EM1"),
             TreeNode(key: "EM2"),
             TreeNode(key: "EM3"),
-            TreeNode(key: "EM4"),
-            TreeNode(key: "EM5"),
+            // TreeNode(key: "EM4"),
+            // TreeNode(key: "EM5"),
           ]),
         TreeNode(key: "Trading Plans", data: Icons.rule),
         TreeNode(key: "Big Players", data: Icons.brightness_1),

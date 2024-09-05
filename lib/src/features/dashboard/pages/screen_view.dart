@@ -1,11 +1,10 @@
 import 'package:flutterguide/src/core/core.dart';
 import 'package:flutterguide/src/features/dashboard/pages/candlesticks/important_candlestick_patterns.dart';
+import 'package:flutterguide/src/features/dashboard/pages/entry_models/what_why_entry_models.dart';
 import 'package:flutterguide/src/features/dashboard/pages/indicators/fixed_volume_profile_page.dart';
 import 'package:flutterguide/src/features/dashboard/pages/indicators/rsi_page.dart';
-import 'package:flutterguide/src/features/dashboard/pages/indicators/volume_page.dart';
 import 'package:flutterguide/src/features/dashboard/pages/market_terms/bos_choch_page.dart';
-import 'package:flutterguide/src/features/dashboard/pages/market_terms/fvg_page.dart';
-import 'package:flutterguide/src/features/dashboard/pages/market_terms/market_terms_page.dart';
+import 'package:flutterguide/src/features/dashboard/pages/types_of_traders_page.dart';
 import 'pages.dart';
 
 class ScreensView extends StatelessWidget {
@@ -89,6 +88,12 @@ class ScreensView extends StatelessWidget {
         break;
       case 'Fixed Volume Profile':
         page = const FixedVolumeProfilePage();
+        break;
+      case 'Type of Traders':
+        page = const TypesOfTradersPage();
+        break;
+      case 'Entry Models':
+        page = const WhatWhyEntryModels();
         break;
       default:
         page = const Center(

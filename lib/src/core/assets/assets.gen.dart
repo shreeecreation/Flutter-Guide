@@ -102,6 +102,10 @@ class $AssetsImagesGen {
   AssetGenImage get transparentLogo =>
       const AssetGenImage('assets/images/transparent_logo.png');
 
+  /// File path: assets/images/typesoftrader.jpeg
+  AssetGenImage get typesoftrader =>
+      const AssetGenImage('assets/images/typesoftrader.jpeg');
+
   /// File path: assets/images/volume.jpeg
   AssetGenImage get volume => const AssetGenImage('assets/images/volume.jpeg');
 
@@ -131,6 +135,7 @@ class $AssetsImagesGen {
         supportResistance2,
         tradingProtrait,
         transparentLogo,
+        typesoftrader,
         volume
       ];
 }
