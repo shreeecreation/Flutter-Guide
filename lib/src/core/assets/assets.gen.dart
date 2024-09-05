@@ -35,6 +35,15 @@ class $AssetsImagesGen {
   /// File path: assets/images/choch.jpeg
   AssetGenImage get choch => const AssetGenImage('assets/images/choch.jpeg');
 
+  /// File path: assets/images/em1.jpeg
+  AssetGenImage get em1 => const AssetGenImage('assets/images/em1.jpeg');
+
+  /// File path: assets/images/em2.jpeg
+  AssetGenImage get em2 => const AssetGenImage('assets/images/em2.jpeg');
+
+  /// File path: assets/images/em3.jpeg
+  AssetGenImage get em3 => const AssetGenImage('assets/images/em3.jpeg');
+
   /// File path: assets/images/ema.jpeg
   AssetGenImage get ema => const AssetGenImage('assets/images/ema.jpeg');
 
@@ -117,6 +126,9 @@ class $AssetsImagesGen {
         candlestick,
         candlestickPatterns,
         choch,
+        em1,
+        em2,
+        em3,
         ema,
         fcLogo,
         fibonacci,

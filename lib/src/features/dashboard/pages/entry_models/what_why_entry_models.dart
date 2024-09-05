@@ -22,10 +22,14 @@ class WhatWhyEntryModels extends StatelessWidget {
                   Text("Learn Forex - What & Why Entry Models", style: AppStyles.text24PxBold),
                   10.verticalSpace,
                   Text(
-                    "In a battlefield, every warrior has a carefully crafted plan to attack the opponent. This plan depends on the strength of the enemy, the weather, the terrain, and overall strategy. Similarly, in trading, entry models are the strategic plans that traders follow to maintain discipline and consistency. These models guide when and how to enter a trade, ensuring that traders act based on reason rather than emotion.\n\nEvery trader have their own type of entry models according to their strategy and techniques. \n\nIn this chapter we will be talking about 5 Entry Models that is being by our traders.",
+                    "In a battlefield, every warrior has a carefully crafted plan to attack the opponent. This plan depends on the strength of the enemy, the weather, the terrain, and overall strategy. Similarly, in trading, entry models are the strategic plans that traders follow to maintain discipline and consistency. These models guide when and how to enter a trade, ensuring that traders act based on reason rather than emotion.\n\nEvery trader have their own type of entry models according to their strategy and techniques. \n\nIn this chapter we will be talking about 3 Entry Models that is being by our traders.",
                     style: AppStyles.text18PxMedium,
                   ),
-                  30.verticalSpace,
+                  20.verticalSpace,
+                  Text(
+                    "EM1 (Entry Model 1)\n\nEM2 (Entry Model 2)\n\nEM3 (Entry Model 3)",
+                    style: AppStyles.text18PxSemiBold,
+                  ),
                 ],
               ),
             ),
