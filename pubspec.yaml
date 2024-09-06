@@ -57,6 +57,7 @@ flutter:
     - assets/images/hall_of_names/
     - assets/svg/
     - assets/images/pips/
+    - assets/rules.pdf
 
 flutter_gen:
   output: lib/src/core/assets/

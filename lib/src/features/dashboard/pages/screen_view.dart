@@ -5,6 +5,7 @@ import 'package:flutterguide/src/features/dashboard/pages/entry_models/what_why_
 import 'package:flutterguide/src/features/dashboard/pages/indicators/fixed_volume_profile_page.dart';
 import 'package:flutterguide/src/features/dashboard/pages/indicators/rsi_page.dart';
 import 'package:flutterguide/src/features/dashboard/pages/market_terms/bos_choch_page.dart';
+import 'package:flutterguide/src/features/dashboard/pages/trading_plan.dart';
 import 'package:flutterguide/src/features/dashboard/pages/truth_of_trading_page.dart';
 import 'package:flutterguide/src/features/dashboard/pages/types_of_traders_page.dart';
 import 'entry_models/em2_page.dart';
@@ -110,6 +111,9 @@ class ScreensView extends StatelessWidget {
         break;
       case 'The truth of trading':
         page = const TheTruthofTradingPage();
+        break;
+      case 'Trading Plans':
+        page = const TradingPlanPage();
         break;
       default:
         page = const Center(
