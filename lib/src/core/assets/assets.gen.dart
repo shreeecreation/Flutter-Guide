@@ -152,6 +152,19 @@ class $AssetsImagesGen {
       ];
 }
 
+class $AssetsJsonGen {
+  const $AssetsJsonGen();
+
+  /// File path: assets/json/letsgo.json
+  String get letsgo => 'assets/json/letsgo.json';
+
+  /// File path: assets/json/trading.json
+  String get trading => 'assets/json/trading.json';
+
+  /// List of all assets
+  List<String> get values => [letsgo, trading];
+}
+
 class $AssetsSvgGen {
   const $AssetsSvgGen();
 
@@ -207,6 +220,7 @@ class Assets {
   Assets._();
 
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsJsonGen json = $AssetsJsonGen();
   static const String rules = 'assets/rules.pdf';
   static const $AssetsSvgGen svg = $AssetsSvgGen();
 

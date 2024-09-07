@@ -1,7 +1,20 @@
 import 'package:flutterguide/src/core/core.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 
 import '../../../dashboard/pages/sidebar_menu.dart';
+
+void navigateToHomePage(String menu) {
+  final context = Get.context;
+  Navigator.push(
+    context!,
+    MaterialPageRoute(
+      builder: (_) => SidebarMenu(
+        menu: menu,
+      ),
+    ),
+  );
+}
 
 class HomePageHelpers {
   List<Widget> drawerItems = [
@@ -12,60 +25,58 @@ class HomePageHelpers {
         style: AppStyles.text18PxMedium,
       ),
       onTap: () {
-        final context = Get.context;
-        Navigator.push(
-            context!,
-            MaterialPageRoute(
-                builder: (context) => const SidebarMenu(
-                      menu: "Introduction",
-                    )));
+        navigateToHomePage("Introduction");
+      },
+    ),
+    ListTile(
+      leading: const Icon(Icons.analytics),
+      title: Text("Trading Plan", style: AppStyles.text18PxMedium),
+      onTap: () {
+        navigateToHomePage("Trading Plans");
       },
     ),
     ListTile(
       leading: const Icon(Icons.contact_phone),
       title: Text("Contact", style: AppStyles.text18PxMedium),
-      onTap: () {},
-    ),
-    ListTile(
-      leading: const Icon(Icons.analytics),
-      title: Text("Analysis", style: AppStyles.text18PxMedium),
-      onTap: () {},
+      onTap: () {
+        navigateToHomePage("Introduction");
+      },
     ),
   ];
 
   List<Widget> navItems = [
     TextButton(
       onPressed: () {
-        final context = Get.context;
-        Navigator.push(
-            context!,
-            MaterialPageRoute(
-                builder: (context) => const SidebarMenu(
-                      menu: "Pips",
-                    )));
+        navigateToHomePage("Introduction");
+      },
+      child: Text("Learn", style: AppStyles.text18PxMedium.white),
+    ),
+    TextButton(
+      onPressed: () {
+        navigateToHomePage("Entry Models");
       },
       child: Text("Entry Models", style: AppStyles.text18PxMedium.white),
     ),
     TextButton(
-      onPressed: () {},
+      onPressed: () {
+        navigateToHomePage("Candlesticks");
+      },
       child: Text("CandleSticks", style: AppStyles.text18PxMedium.white),
     ),
     TextButton(
-      onPressed: () {},
-      child: Text("Contact", style: AppStyles.text18PxMedium.white),
-    ),
-    TextButton(
-      onPressed: () {},
-      child: Text("Analysis", style: AppStyles.text18PxMedium.white),
-    ),
-    TextButton(
-      onPressed: () {},
-      child: Text("Learn", style: AppStyles.text18PxMedium.white),
-    ),
-    TextButton(
-      onPressed: () {},
+      onPressed: () {
+        navigateToHomePage("Trading Plans");
+      },
       child: Text("Rules", style: AppStyles.text18PxMedium.white),
     ),
+    TextButton(
+      onPressed: () {
+        navigateToHomePage("Contact");
+      },
+      child: Text("Contact", style: AppStyles.text18PxMedium.white),
+    ),
+    10.hSpace,
+    InkWell(child: Lottie.asset(Assets.json.letsgo, height: 150, width: 150, reverse: true)),
     100.hSpace,
   ];
   final List<Map<String, dynamic>> hallOfFamers = [

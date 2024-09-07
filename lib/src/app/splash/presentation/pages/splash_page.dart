@@ -1,10 +1,9 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutterguide/src/core/themes/app_colors.dart';
-import 'package:flutterguide/src/core/widgets/scaffold_wrapper.dart';
+import 'package:flutterguide/src/core/core.dart';
 import 'package:flutterguide/src/features/home/presentation/pages/home_page.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -17,7 +16,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(milliseconds: 1500), () {
+    Timer(const Duration(milliseconds: 3000), () {
       Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(
@@ -32,26 +31,25 @@ class _SplashPageState extends State<SplashPage> {
     return ScaffoldWrapper(
       backgroundColor: AppColors.white,
       body: Center(
-        child: Container(
-          height: 120,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            // image: DecorationImage(
-            //   image: Assets.images.bhurja.provider(),
-            //   fit: BoxFit.cover,
-            // ),
-          ),
-          child: const Center(
-            child: Text(
-              'Forex Academy \n Limitless Learnings',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+        child: Column(
+          children: [
+            Container(
+              child: Lottie.asset(
+                Assets.json.trading,
               ),
             ),
-          ),
-        ).animate().fade(duration: 500.ms),
+            const Center(
+              child: Text(
+                'Forex Academy \n Limitless Learnings',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ).animate().fade(duration: 500.ms),
+          ],
+        ),
       ),
     );
   }
