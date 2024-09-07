@@ -1,11 +1,15 @@
 import 'package:flutterguide/src/core/core.dart';
 import 'package:flutterguide/src/features/dashboard/pages/candlesticks/important_candlestick_patterns.dart';
+import 'package:flutterguide/src/features/dashboard/pages/entry_models/em1_page.dart';
+import 'package:flutterguide/src/features/dashboard/pages/entry_models/what_why_entry_models.dart';
 import 'package:flutterguide/src/features/dashboard/pages/indicators/fixed_volume_profile_page.dart';
 import 'package:flutterguide/src/features/dashboard/pages/indicators/rsi_page.dart';
-import 'package:flutterguide/src/features/dashboard/pages/indicators/volume_page.dart';
 import 'package:flutterguide/src/features/dashboard/pages/market_terms/bos_choch_page.dart';
-import 'package:flutterguide/src/features/dashboard/pages/market_terms/fvg_page.dart';
-import 'package:flutterguide/src/features/dashboard/pages/market_terms/market_terms_page.dart';
+import 'package:flutterguide/src/features/dashboard/pages/trading_plan.dart';
+import 'package:flutterguide/src/features/dashboard/pages/truth_of_trading_page.dart';
+import 'package:flutterguide/src/features/dashboard/pages/types_of_traders_page.dart';
+import 'entry_models/em2_page.dart';
+import 'entry_models/em3_page.dart';
 import 'pages.dart';
 
 class ScreensView extends StatelessWidget {
@@ -89,6 +93,27 @@ class ScreensView extends StatelessWidget {
         break;
       case 'Fixed Volume Profile':
         page = const FixedVolumeProfilePage();
+        break;
+      case 'Type of Traders':
+        page = const TypesOfTradersPage();
+        break;
+      case 'Entry Models':
+        page = const WhatWhyEntryModels();
+        break;
+      case 'EM1':
+        page = const EntryModel1();
+        break;
+      case 'EM2':
+        page = const EntryModel2();
+        break;
+      case 'EM3':
+        page = const EntryModel3();
+        break;
+      case 'The truth of trading':
+        page = const TheTruthofTradingPage();
+        break;
+      case 'Trading Plans':
+        page = const TradingPlanPage();
         break;
       default:
         page = const Center(

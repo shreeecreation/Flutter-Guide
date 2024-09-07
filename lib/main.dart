@@ -1,13 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterguide/firebase_options.dart';
-import 'package:flutterguide/src/features/dashboard/pages/sidebar_menu.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'src/app/splash/presentation/pages/splash_page.dart';
 import 'src/core/helpers/adaptive_helper.dart';
 import 'src/core/widgets/adaptive_sizer_widget.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+
+import 'src/features/dashboard/pages/sidebar_menu.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
               ],
             );
           },
-          title: 'Flutter Demo',
+          title: 'Forex Academy',
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget {
           ),
           debugShowCheckedModeBanner: false,
           home: const SplashPage(),
-          // home: const SidebarMenu(menu: "Indicators"),
+          // home: const SidebarMenu(menu: "Type of Traders"),
         );
       },
     );

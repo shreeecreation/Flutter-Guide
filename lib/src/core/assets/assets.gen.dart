@@ -35,6 +35,15 @@ class $AssetsImagesGen {
   /// File path: assets/images/choch.jpeg
   AssetGenImage get choch => const AssetGenImage('assets/images/choch.jpeg');
 
+  /// File path: assets/images/em1.jpeg
+  AssetGenImage get em1 => const AssetGenImage('assets/images/em1.jpeg');
+
+  /// File path: assets/images/em2.jpeg
+  AssetGenImage get em2 => const AssetGenImage('assets/images/em2.jpeg');
+
+  /// File path: assets/images/em3.jpeg
+  AssetGenImage get em3 => const AssetGenImage('assets/images/em3.jpeg');
+
   /// File path: assets/images/ema.jpeg
   AssetGenImage get ema => const AssetGenImage('assets/images/ema.jpeg');
 
@@ -102,6 +111,10 @@ class $AssetsImagesGen {
   AssetGenImage get transparentLogo =>
       const AssetGenImage('assets/images/transparent_logo.png');
 
+  /// File path: assets/images/typesoftrader.jpeg
+  AssetGenImage get typesoftrader =>
+      const AssetGenImage('assets/images/typesoftrader.jpeg');
+
   /// File path: assets/images/volume.jpeg
   AssetGenImage get volume => const AssetGenImage('assets/images/volume.jpeg');
 
@@ -113,6 +126,9 @@ class $AssetsImagesGen {
         candlestick,
         candlestickPatterns,
         choch,
+        em1,
+        em2,
+        em3,
         ema,
         fcLogo,
         fibonacci,
@@ -131,8 +147,22 @@ class $AssetsImagesGen {
         supportResistance2,
         tradingProtrait,
         transparentLogo,
+        typesoftrader,
         volume
       ];
+}
+
+class $AssetsJsonGen {
+  const $AssetsJsonGen();
+
+  /// File path: assets/json/letsgo.json
+  String get letsgo => 'assets/json/letsgo.json';
+
+  /// File path: assets/json/trading.json
+  String get trading => 'assets/json/trading.json';
+
+  /// List of all assets
+  List<String> get values => [letsgo, trading];
 }
 
 class $AssetsSvgGen {
@@ -190,7 +220,12 @@ class Assets {
   Assets._();
 
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsJsonGen json = $AssetsJsonGen();
+  static const String rules = 'assets/rules.pdf';
   static const $AssetsSvgGen svg = $AssetsSvgGen();
+
+  /// List of all assets
+  List<String> get values => [rules];
 }
 
 class AssetGenImage {

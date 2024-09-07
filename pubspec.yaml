@@ -33,21 +33,28 @@ dependencies:
   animated_tree_view: ^2.2.0
   flutter_screenutil: ^5.9.3
   firebase_core: ^2.24.2
+  rename: ^3.0.2
+  lottie: ^3.1.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: ^0.13.1
 
   
+  flutter_launcher_icons: ^0.13.1
   flutter_lints: ^2.0.0
   build_runner: ^2.3.3
   flutter_gen_runner: ^5.3.1
 
-flutter_icons:
-  image_path: "assets/images/icon.png"
-  android: true
-  ios: true
+flutter_launcher_icons:
+  android: "launcher_icon"
+  image_path: "assets/images/fc_logo.png"
+  min_sdk_android: 21 
+  web:
+    generate: true
+    image_path: "assets/images/fc_logo.png"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
 
 flutter:
   uses-material-design: true
@@ -57,6 +64,8 @@ flutter:
     - assets/images/hall_of_names/
     - assets/svg/
     - assets/images/pips/
+    - assets/rules.pdf
+    - assets/json/
 
 flutter_gen:
   output: lib/src/core/assets/

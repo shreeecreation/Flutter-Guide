@@ -672,6 +672,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.2"
+  logger:
+    dependency: transitive
+    description:
+      name: logger
+      sha256: "697d067c60c20999686a0add96cf6aba723b3aa1f83ecf806a8097231529ec32"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.0"
   logging:
     dependency: transitive
     description:
@@ -680,6 +688,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
+  lottie:
+    dependency: "direct main"
+    description:
+      name: lottie
+      sha256: "6a24ade5d3d918c306bb1c21a6b9a04aab0489d51a2582522eea820b4093b62b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.2"
   matcher:
     dependency: transitive
     description:
@@ -864,6 +880,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.3"
+  rename:
+    dependency: "direct main"
+    description:
+      name: rename
+      sha256: "6ef5daf4b11130e71d93630cfb70725e5a35b19039739cfcd2b272c834ba25fe"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.2"
   responsive_framework:
     dependency: "direct main"
     description:
