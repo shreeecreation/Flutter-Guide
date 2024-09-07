@@ -207,7 +207,11 @@ class Assets {
   Assets._();
 
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const String rules = 'assets/rules.pdf';
   static const $AssetsSvgGen svg = $AssetsSvgGen();
+
+  /// List of all assets
+  List<String> get values => [rules];
 }
 
 class AssetGenImage {
