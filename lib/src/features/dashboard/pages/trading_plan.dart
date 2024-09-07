@@ -1,9 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_html/flutter_html.dart';
-import 'dart:html' as html;
 
 import 'package:flutterguide/src/core/core.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class TradingPlanPage extends StatelessWidget {
   const TradingPlanPage({super.key});
@@ -31,14 +32,7 @@ class TradingPlanPage extends StatelessWidget {
                       CustomButton(
                         label: "  Download PDF  ",
                         onPressed: () async {
-                          final ByteData data = await rootBundle.load('assets/rules.pdf');
-                          final List<int> bytes = data.buffer.asUint8List();
-                          final blob = html.Blob([bytes]);
-                          final url = html.Url.createObjectUrlFromBlob(blob);
-                          final anchor = html.AnchorElement(href: url)
-                            ..setAttribute("download", "FXAcademyRules.pdf")
-                            ..click();
-                          html.Url.revokeObjectUrl(url);
+                          await launchUrlString("assets/ForexAcademy.pdf");
                         },
                         isDisabled: false,
                       )

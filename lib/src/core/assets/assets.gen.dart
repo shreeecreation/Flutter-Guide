@@ -219,13 +219,13 @@ class $AssetsImagesPipsGen {
 class Assets {
   Assets._();
 
+  static const String forexAcademy = 'assets/ForexAcademy.pdf';
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsJsonGen json = $AssetsJsonGen();
-  static const String rules = 'assets/rules.pdf';
   static const $AssetsSvgGen svg = $AssetsSvgGen();
 
   /// List of all assets
-  List<String> get values => [rules];
+  List<String> get values => [forexAcademy];
 }
 
 class AssetGenImage {
