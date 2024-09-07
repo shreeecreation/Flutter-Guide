@@ -35,6 +35,7 @@ dependencies:
   firebase_core: ^2.24.2
   rename: ^3.0.2
   lottie: ^3.1.2
+  url_launcher: ^6.3.0
 
 dev_dependencies:
   flutter_test:
@@ -64,7 +65,7 @@ flutter:
     - assets/images/hall_of_names/
     - assets/svg/
     - assets/images/pips/
-    - assets/rules.pdf
+    - assets/ForexAcademy.pdf
     - assets/json/
 
 flutter_gen:
