@@ -14,7 +14,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final mobile = context.width < 600;
     return ScaffoldWrapper(
+
       drawer: mobile
+
           ? Drawer(
               child: ListView(
                 padding: EdgeInsets.zero,

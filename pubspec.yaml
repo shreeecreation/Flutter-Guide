@@ -33,11 +33,12 @@ dependencies:
   animated_tree_view: ^2.2.0
   flutter_screenutil: ^5.9.3
   firebase_core: ^2.24.2
+  rename: ^3.0.2
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: ^0.13.1
 
   
   flutter_lints: ^2.0.0
