@@ -14,9 +14,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final mobile = context.width < 600;
     return ScaffoldWrapper(
-
       drawer: mobile
-
           ? Drawer(
               child: ListView(
                 padding: EdgeInsets.zero,
@@ -77,131 +75,122 @@ class _HomePageState extends State<HomePage> {
                 ).pOnly(top: 15.0),
               )),
           SliverToBoxAdapter(
-            child: ResponsiveWrapper(
-              defaultScale: true,
-              minWidth: 450,
-              breakpoints: const [
-                ResponsiveBreakpoint.resize(600, name: MOBILE),
-                ResponsiveBreakpoint.autoScale(800, name: TABLET),
-                ResponsiveBreakpoint.autoScale(1200, name: DESKTOP),
-              ],
-              child: Container(
-                color: AppColors.black,
-                child: Stack(
-                  children: [
-                    SizedBox(
-                      width: double.infinity,
-                      height: context.height * 2,
-                      child: Opacity(
-                        opacity: 0.15,
-                        child: AppCacheImageViewer(
-                          imageUrl: mobile ? Assets.images.tradingProtrait.path : Assets.images.background.path,
-                          imageTypeEnum: ImageTypeEnum.assets,
-                        ),
+            child: Container(
+              color: AppColors.black,
+              child: Stack(
+                children: [
+                  SizedBox(
+                    width: double.infinity,
+                    height: context.height * 2,
+                    child: Opacity(
+                      opacity: 0.15,
+                      child: AppCacheImageViewer(
+                        imageUrl: mobile ? Assets.images.tradingProtrait.path : Assets.images.background.path,
+                        imageTypeEnum: ImageTypeEnum.assets,
                       ),
                     ),
-                    Column(
-                      children: [
-                        30.vSpace,
-                        Center(
-                          child: Text(
-                            "Welcome G's !",
-                            style: AppStyles.text30PxMedium.white,
-                          ),
+                  ),
+                  Column(
+                    children: [
+                      30.vSpace,
+                      Center(
+                        child: Text(
+                          "Welcome G's !",
+                          style: AppStyles.text30PxMedium.white,
                         ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        60.vSpace,
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            !mobile
-                                ? SizedBox(
-                                    height: context.height * .4,
-                                    child: AppCacheImageViewer(imageUrl: Assets.images.pnglogo.path, imageTypeEnum: ImageTypeEnum.assets),
-                                  )
-                                : const SizedBox(),
-                            SizedBox(
-                              width: mobile ? context.width : context.width * .5,
-                              child: Column(
-                                crossAxisAlignment: mobile ? CrossAxisAlignment.center : CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "The Game - Forex Trading",
-                                    style: AppStyles.text36PxSemiBold.white,
-                                    textAlign: TextAlign.center,
-                                  ),
-                                  15.vSpace,
-                                  Text(
-                                    "This game is a constant battle between you and your emotions. It is a battleground where mastering your emotions is the key to success.",
-                                    style: AppStyles.text18PxMedium.white,
-                                  ),
-                                  10.vSpace,
-                                  Text(
-                                    "The secret of getting ahead is getting started. — Mark Twain",
-                                    style: AppStyles.text16PxSemiBold.copyWith(fontStyle: FontStyle.italic, color: AppColors.greyColor),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ).px(18.0),
-                        50.vSpace,
-                        const InfoCardWidgets(),
-                        50.vSpace,
-                        Container(
-                          color: AppColors.white,
-                          width: double.infinity,
-                          height: context.height * .55,
-                          child: Center(
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      60.vSpace,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          !mobile
+                              ? SizedBox(
+                                  height: context.height * .4,
+                                  child: AppCacheImageViewer(imageUrl: Assets.images.pnglogo.path, imageTypeEnum: ImageTypeEnum.assets),
+                                )
+                              : const SizedBox(),
+                          SizedBox(
+                            width: mobile ? context.width : context.width * .5,
                             child: Column(
+                              crossAxisAlignment: mobile ? CrossAxisAlignment.center : CrossAxisAlignment.start,
                               children: [
-                                30.vSpace,
                                 Text(
-                                  "Hall of Fames",
-                                  style: AppStyles.text30PxBold,
-                                ),
-                                30.vSpace,
-
-                                ///
-                                ///
-                                ///
-                                /// hall of fames
-                                ///
-                                ///
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                  children:
-                                      HomePageHelpers().hallOfFamers.map((e) => HallOfFameWidget(name: e["name"], imageUrl: e["imageUrl"])).toList(),
-                                ),
-                                50.vSpace,
-                                Text(
-                                  "They are the Hall of Famers in the forex market, recognized for their exceptional trading journeys. Their stories serve as an inspiration to many new traders, and their strategies are seen as the key to success in the forex market. Some of them started from \$10000, \$1000. They are the living proof that anyone can make it in the forex market.",
-                                  style: AppStyles.text16PxSemiBold,
+                                  "The Game - Forex Trading",
+                                  style: AppStyles.text36PxSemiBold.white,
                                   textAlign: TextAlign.center,
-                                ).px(20.0),
-
-                                ///
-                                ///
-                                ///
-                                ///
-                                ///
+                                ),
+                                15.vSpace,
+                                Text(
+                                  "This game is a constant battle between you and your emotions. It is a battleground where mastering your emotions is the key to success.",
+                                  style: AppStyles.text18PxMedium.white,
+                                ),
+                                10.vSpace,
+                                Text(
+                                  "The secret of getting ahead is getting started. — Mark Twain",
+                                  style: AppStyles.text16PxSemiBold.copyWith(fontStyle: FontStyle.italic, color: AppColors.greyColor),
+                                ),
                               ],
                             ),
                           ),
+                        ],
+                      ).px(18.0),
+                      50.vSpace,
+                      const InfoCardWidgets(),
+                      50.vSpace,
+                      Container(
+                        color: AppColors.white,
+                        width: double.infinity,
+                        height: context.height * .55,
+                        child: Center(
+                          child: Column(
+                            children: [
+                              30.vSpace,
+                              Text(
+                                "Hall of Fames",
+                                style: AppStyles.text30PxBold,
+                              ),
+                              30.vSpace,
+
+                              ///
+                              ///
+                              ///
+                              /// hall of fames
+                              ///
+                              ///
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children:
+                                    HomePageHelpers().hallOfFamers.map((e) => HallOfFameWidget(name: e["name"], imageUrl: e["imageUrl"])).toList(),
+                              ),
+                              50.vSpace,
+                              Text(
+                                "They are the Hall of Famers in the forex market, recognized for their exceptional trading journeys. Their stories serve as an inspiration to many new traders, and their strategies are seen as the key to success in the forex market. Some of them started from \$10000, \$1000. They are the living proof that anyone can make it in the forex market.",
+                                style: AppStyles.text16PxSemiBold,
+                                textAlign: TextAlign.center,
+                              ).px(20.0),
+
+                              ///
+                              ///
+                              ///
+                              ///
+                              ///
+                            ],
+                          ),
                         ),
-                        Container(
-                          height: 300,
-                          color: AppColors.black,
-                          width: double.infinity,
-                          child: const Footer(),
-                        ),
-                      ],
-                    )
-                  ],
-                ),
+                      ),
+                      Container(
+                        height: 300,
+                        color: AppColors.black,
+                        width: double.infinity,
+                        child: const Footer(),
+                      ),
+                    ],
+                  )
+                ],
               ),
             ),
           ),
