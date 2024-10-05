@@ -1,4 +1,5 @@
 import 'package:flutterguide/src/core/core.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 import '../widgets/widgets.dart';
 
 class HomePage extends StatefulWidget {
@@ -204,6 +205,8 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final String email = 'mailto:example@example.com?subject=Hello%20Shree&body=I%20wanted%20to%20discuss%20something';
+
     return Container(
       color: Colors.black,
       padding: const EdgeInsets.all(20),
@@ -237,9 +240,33 @@ class Footer extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "© Forex Academy",
-                  style: AppStyles.text16PxMedium.white,
+                Row(
+                  children: [
+                    Text(
+                      "© Forex Academy",
+                      style: AppStyles.text16PxMedium.white,
+                    ),
+                    20.hSpace,
+                    InkWell(
+                      onTap: () {
+                        launchUrlString('https://discord.gg/exvqCvcy');
+                      },
+                      child: Icon(Icons.discord, color: AppColors.white),
+                    ),
+                    10.hSpace,
+                    InkWell(
+                      onTap: () {
+                        launchUrlString(email);
+                      },
+                      child: Icon(Icons.mail, color: AppColors.white),
+                    ),
+                    10.hSpace,
+                    InkWell(
+                        onTap: () {
+                          launchUrlString('https://www.instagram.com/shreeefx/');
+                        },
+                        child: Assets.svg.insta.svg(colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn))),
+                  ],
                 ),
                 Row(
                   children: [

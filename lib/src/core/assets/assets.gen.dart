@@ -7,9 +7,10 @@
 // ignore_for_file: type=lint
 // ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
 
-import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/flutter_svg.dart' as _svg;
+import 'package:vector_graphics/vector_graphics.dart' as _vg;
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
@@ -73,6 +74,7 @@ class $AssetsImagesGen {
   /// File path: assets/images/fvp3.jpeg
   AssetGenImage get fvp3 => const AssetGenImage('assets/images/fvp3.jpeg');
 
+  /// Directory path: assets/images/hall_of_names
   $AssetsImagesHallOfNamesGen get hallOfNames =>
       const $AssetsImagesHallOfNamesGen();
 
@@ -80,6 +82,7 @@ class $AssetsImagesGen {
   AssetGenImage get liquidity =>
       const AssetGenImage('assets/images/liquidity.jpeg');
 
+  /// Directory path: assets/images/pips
   $AssetsImagesPipsGen get pips => const $AssetsImagesPipsGen();
 
   /// File path: assets/images/playstore.png
@@ -168,11 +171,14 @@ class $AssetsJsonGen {
 class $AssetsSvgGen {
   const $AssetsSvgGen();
 
+  /// File path: assets/svg/insta.svg
+  SvgGenImage get insta => const SvgGenImage('assets/svg/insta.svg');
+
   /// File path: assets/svg/playstore.svg
   SvgGenImage get playstore => const SvgGenImage('assets/svg/playstore.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [playstore];
+  List<SvgGenImage> get values => [insta, playstore];
 }
 
 class $AssetsImagesHallOfNamesGen {
@@ -225,13 +231,20 @@ class Assets {
   static const $AssetsSvgGen svg = $AssetsSvgGen();
 
   /// List of all assets
-  List<String> get values => [forexAcademy];
+  static List<String> get values => [forexAcademy];
 }
 
 class AssetGenImage {
-  const AssetGenImage(this._assetName);
+  const AssetGenImage(
+    this._assetName, {
+    this.size,
+    this.flavors = const {},
+  });
 
   final String _assetName;
+
+  final Size? size;
+  final Set<String> flavors;
 
   Image image({
     Key? key,
@@ -303,11 +316,24 @@ class AssetGenImage {
 }
 
 class SvgGenImage {
-  const SvgGenImage(this._assetName);
+  const SvgGenImage(
+    this._assetName, {
+    this.size,
+    this.flavors = const {},
+  }) : _isVecFormat = false;
+
+  const SvgGenImage.vec(
+    this._assetName, {
+    this.size,
+    this.flavors = const {},
+  }) : _isVecFormat = true;
 
   final String _assetName;
+  final Size? size;
+  final Set<String> flavors;
+  final bool _isVecFormat;
 
-  SvgPicture svg({
+  _svg.SvgPicture svg({
     Key? key,
     bool matchTextDirection = false,
     AssetBundle? bundle,
@@ -320,19 +346,32 @@ class SvgGenImage {
     WidgetBuilder? placeholderBuilder,
     String? semanticsLabel,
     bool excludeFromSemantics = false,
-    SvgTheme theme = const SvgTheme(),
+    _svg.SvgTheme? theme,
     ColorFilter? colorFilter,
     Clip clipBehavior = Clip.hardEdge,
     @deprecated Color? color,
     @deprecated BlendMode colorBlendMode = BlendMode.srcIn,
     @deprecated bool cacheColorFilter = false,
   }) {
-    return SvgPicture.asset(
-      _assetName,
+    final _svg.BytesLoader loader;
+    if (_isVecFormat) {
+      loader = _vg.AssetBytesLoader(
+        _assetName,
+        assetBundle: bundle,
+        packageName: package,
+      );
+    } else {
+      loader = _svg.SvgAssetLoader(
+        _assetName,
+        assetBundle: bundle,
+        packageName: package,
+        theme: theme,
+      );
+    }
+    return _svg.SvgPicture(
+      loader,
       key: key,
       matchTextDirection: matchTextDirection,
-      bundle: bundle,
-      package: package,
       width: width,
       height: height,
       fit: fit,
@@ -341,10 +380,8 @@ class SvgGenImage {
       placeholderBuilder: placeholderBuilder,
       semanticsLabel: semanticsLabel,
       excludeFromSemantics: excludeFromSemantics,
-      theme: theme,
-      colorFilter: colorFilter,
-      color: color,
-      colorBlendMode: colorBlendMode,
+      colorFilter: colorFilter ??
+          (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
       clipBehavior: clipBehavior,
       cacheColorFilter: cacheColorFilter,
     );
