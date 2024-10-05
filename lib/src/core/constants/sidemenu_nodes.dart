@@ -51,6 +51,7 @@ class SidemenuNodes {
           ]),
         TreeNode(key: "Trading Plans", data: Icons.rule),
         TreeNode(key: "The truth of trading", data: Icons.settings),
+        TreeNode(key: "Connect with us ", data: Icons.connect_without_contact),
       ],
     );
 }

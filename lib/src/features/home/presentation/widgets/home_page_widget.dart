@@ -1,6 +1,8 @@
 import 'package:flutterguide/src/core/core.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../dashboard/pages/sidebar_menu.dart';
 
@@ -17,6 +19,8 @@ void navigateToHomePage(String menu) {
 }
 
 class HomePageHelpers {
+  static String discordUrl = 'https://discord.gg/exvqCvcy';
+
   List<Widget> drawerItems = [
     ListTile(
       leading: const Icon(Icons.school),
@@ -76,7 +80,11 @@ class HomePageHelpers {
       child: Text("Contact", style: AppStyles.text18PxMedium.white),
     ),
     10.hSpace,
-    InkWell(child: Lottie.asset(Assets.json.letsgo, height: 150, width: 150, reverse: true)),
+    InkWell(
+        onTap: () async {
+          launchUrlString(discordUrl);
+        },
+        child: Lottie.asset(Assets.json.letsgo, height: 150, width: 150, reverse: true)),
     100.hSpace,
   ];
   final List<Map<String, dynamic>> hallOfFamers = [

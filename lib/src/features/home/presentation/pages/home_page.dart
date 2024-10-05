@@ -1,5 +1,4 @@
 import 'package:flutterguide/src/core/core.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 import '../widgets/widgets.dart';
 
 class HomePage extends StatefulWidget {
