@@ -71,4 +71,5 @@ class DefaultFirebaseOptions {
     authDomain: 'forex-b5fd7.firebaseapp.com',
     storageBucket: 'forex-b5fd7.appspot.com',
   );
+
 }

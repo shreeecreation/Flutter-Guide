@@ -1,9 +1,22 @@
 import 'package:flutterguide/src/core/core.dart';
+import 'package:flutterguide/src/features/dashboard/pages/sidebar_menu.dart';
+import 'package:get/get.dart';
 
 class InfoCardWidgets extends StatelessWidget {
   const InfoCardWidgets({
     super.key,
   });
+  void navigateToHomePage(String menu) {
+    final context = Get.context;
+    Navigator.push(
+      context!,
+      MaterialPageRoute(
+        builder: (_) => SidebarMenu(
+          menu: menu,
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +34,7 @@ class InfoCardWidgets extends StatelessWidget {
               buttonText: "Start Learning",
               onButtonPressed: () {
                 // Handle Learn button press
+                navigateToHomePage("Introduction");
               },
             ),
             20.hSpace,
@@ -30,6 +44,7 @@ class InfoCardWidgets extends StatelessWidget {
               buttonText: "Start Analyzing",
               onButtonPressed: () {
                 // Handle Analysis button press
+                navigateToHomePage("Learn");
               },
             ),
             20.hSpace,
@@ -45,15 +60,17 @@ class InfoCardWidgets extends StatelessWidget {
               buttonText: "Start Exploring",
               onButtonPressed: () {
                 // Handle Learn button press
+                navigateToHomePage("Entry Models");
               },
             ),
             20.hSpace,
             InfoCard(
-              title: "Analysis",
-              description: "Learn how to analyze the market and make informed decisions",
+              title: "Trading Plans",
+              description: "Create your strong trading plans and strategies",
               buttonText: "Start Analyzing",
               onButtonPressed: () {
                 // Handle Analysis button press
+                navigateToHomePage("Trading Plans");
               },
             ),
             20.hSpace,

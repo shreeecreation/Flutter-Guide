@@ -50,6 +50,7 @@ class SidemenuNodes {
             // TreeNode(key: "EM5"),
           ]),
         TreeNode(key: "Trading Plans", data: Icons.rule),
+        TreeNode(key: "Today Analysis", data: Icons.analytics),
         TreeNode(key: "The truth of trading", data: Icons.settings),
         TreeNode(key: "Connect with us ", data: Icons.connect_without_contact),
       ],

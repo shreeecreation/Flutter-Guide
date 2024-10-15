@@ -1,4 +1,5 @@
 import 'package:flutterguide/src/core/core.dart';
+import 'package:flutterguide/src/features/dashboard/pages/analysis_page.dart';
 import 'package:flutterguide/src/features/dashboard/pages/candlesticks/important_candlestick_patterns.dart';
 import 'package:flutterguide/src/features/dashboard/pages/entry_models/em1_page.dart';
 import 'package:flutterguide/src/features/dashboard/pages/entry_models/what_why_entry_models.dart';
@@ -14,7 +15,7 @@ import 'pages.dart';
 
 class ScreensView extends StatelessWidget {
   final String menu;
-  const ScreensView({Key? key, required this.menu}) : super(key: key);
+  const ScreensView({super.key, required this.menu});
   @override
   Widget build(BuildContext context) {
     Widget page;
@@ -114,6 +115,9 @@ class ScreensView extends StatelessWidget {
         break;
       case 'Trading Plans':
         page = const TradingPlanPage();
+        break;
+      case 'Today Analysis':
+        page = const AnalysisPage();
         break;
       default:
         page = const Center(
